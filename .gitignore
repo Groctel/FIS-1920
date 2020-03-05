@@ -1,0 +1,9 @@
+bin/
+obj/
+.cache/
+
+*.aux
+*.log
+*.out
+*.pdf
+*.toc
