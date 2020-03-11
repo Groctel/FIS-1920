@@ -1,0 +1,44 @@
+\section{Descripción general del problema }
+
+\begin{itemize}
+	\item La aplicación debe gestionar los cobros de las rentas de alquiler de forma que el arrendador reciba periodicamente el cobro del arrendatario. En esta transferencia la agencia inmobiliaria recibe una comisión
+	\item Para la creación de contratos de alquiler con clientes de la agencia la aplicación debe distinguir entre arrendador y arrendatario:
+	\begin{itemize}
+		\item El arrendador debe tener un contrato con la agencia
+		\item El arrendatario debe tener un contrato con la agencia y con el arrendador
+	\end{itemize}
+	\item Control de la reclamación de deudas de inquilinos tanto para el arrendador como para la agencia. El arrendatario recibirá una penalización establecida en el contrato en base a la magnitud del impago
+	\begin{itemize}
+		\item El arrendador podrá reclamar en cualquier momento pasado el plazo de pago del alquiler y el arrendatario recibirá una notificación
+		\item La agencia notificará al inquilino tras un periodo establecido en el contrato y si se requiere, se le deshauciará previo aviso
+	\end{itemize}
+	\item El inquilino y el casero pueden notificar de las averías en las viviendas alquiladas. Dependiendo de la magnitud, la responsabilidad recaerá sobre el casero o la agencia. Si se determinara que la avería es provocada, el inquilino deberá responder con su fianza
+	\begin{itemize}
+		\item Los contratos para locales comerciales incorporan un seguro sobre posibles desperfectos
+	\end{itemize}
+	\item La aplicación debe poner en contacto arrendadores que deseen intercambiar sus viviendas
+	\item La agencia debe tener integración con páginas de alquiler generalistas para listar los anuncios. La página web de la agencia se publicitará mediante anuncios en páginas web no relacionadas. También se publicarán anuncios de la localidad en periódicos de dicha zona.
+\end{itemize}
+
+\subsection{IMPLICADOS}
+
+\begin{itemize}
+	\item \textbf{Arrendador: }usuario sistema
+	\begin{itemize}
+		\item Poner y retirar propiedades del mercado
+		\item Atender a los posibles arrendatarios
+	\end{itemize}
+	\item \textbf{Arrendatario:} usuario sistema
+	\begin{itemize}
+		\item Alquilar propiedades
+		\item Ponerse en contacto con arrendadores
+	\end{itemize}
+	\item \textbf{Agente inmobiliario:} usuario producto
+	\begin{itemize}
+		\item Poner en contacto arrendador y arrendatarios
+		\item Gestionar y diseñar el contrato
+		\item Verificar el correcto estado de las propiedades
+	\end{itemize}
+\end{itemize}
+
+\subsection{OBJETIVOS}
