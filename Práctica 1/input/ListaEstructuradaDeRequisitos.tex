@@ -9,13 +9,72 @@
 		\item Datos personales
 		\item Datos de pago
 		\item Restricciones de área (zona, localidad, provincia)
+		\item Arrendador o arrendatario
 	\end{itemize}
 	\item\textbf{Propiedades:} Información del conjunto de todas las propiedades en alquiler.
+	\begin{itemize}
+		\item Identificador
+		\item Localización
+		\item Superficie
+		\item Edificabilidad
+		\item Habitabilidad
+		\item Arrendatario
+		\item Arrendador
+	\end{itemize}
 \end{enumerate}
 
 \subsection{Requisitos funcionales}
 
 \subsection{Requisitos no funcionales}
+
+\subsubsection{Usabilidad}
+
+\begin{enumerate}
+	\item La aplicación se basará en los estándares de diseño de Google para ofrecer una navegación intuitiva a usuarios primerizos.
+	\item Las aplicaciones incorporarán opciones de ayuda al navegamiento para discapacitados.
+	\item Se proporcionará un manual de uso para los agentes inmobiliarios que manejen el sistema.
+	\item La aplicación incorporará un tutorial interactivo tanto para arrendadores como arrendatarios para guiarlos a través de los procesos básicos.
+\end{enumerate}
+
+\subsubsection{Fiabilidad}
+
+\begin{enumerate}
+	\item Se realizarán copias de seguridad periódicas de las bases de datos.
+	\item Los contratos se almacenarán en sistemas que prevengan su pérdida.
+\end{enumerate}
+
+\subsubsection{Rendimiento}
+
+\begin{enumerate}
+	\item Las búsquedas de propiedades se realizarán en tiempo constante.
+	\item El sistema deberá actualizar en tiempo real la disponibilidad de las propiedades.
+\end{enumerate}
+
+\subsubsection{Soporte}
+
+\begin{enumerate}
+	\item El sistema incorporará una aplicación CLI para servidores sin cabeza.
+\end{enumerate}
+
+\subsubsection{Implementación}
+
+\begin{enumerate}
+	\item Se debe usar el lenguaje C++ con bibliotecas de compatibilidad con Android e iOS\@.
+	\item Las bases de datos se implementarán en MySQL\@.
+\end{enumerate}
+
+\subsubsection{Interfaz}
+
+\begin{enumerate}
+	\item El sistema enviará periódicamente sus propiedades disponibles a páginas de alquiler generalistas para que se muestren en éstas.
+\end{enumerate}
+
+\subsubsection{Legales}
+
+\begin{enumerate}
+	\item La información personal de los clientes se mantendrá privada en todo momento.
+	\item Los contratos serán privados y confidenciales para usuario no implicados en ellos.
+\end{enumerate}
 
 \section{Glosario}
 
