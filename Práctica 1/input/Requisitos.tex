@@ -1,0 +1,138 @@
+\section{Lista estructurada de requisitos}
+
+\subsection{Requisitos de información}
+
+\begin{enumerate}[label=\textbf{RI-\arabic*}]
+	\item\textbf{Clientes:} Información del conjunto de todos los usuarios del sistema.
+	\begin{itemize}
+		\item DNI
+		\item Datos personales
+		\item Datos de pago
+		\item Restricciones de área (zona, localidad, provincia)
+		\item Arrendador o arrendatario
+	\end{itemize}
+	\item\textbf{Propiedades:} Información del conjunto de todas las propiedades en alquiler.
+	\begin{itemize}
+		\item Identificador
+		\item Localización
+		\item Superficie
+		\item Edificabilidad
+		\item Habitabilidad
+		\item Arrendatario
+		\item Arrendador
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Requisitos funcionales}
+
+\begin{enumerate}[label=\textbf{RF-\arabic*}]
+	\item\textbf{Gestión de arrendadores:} Se permitirá dar de alta o de baja a un arrendador, así como consultar y/o modificar las propiedades que tiene, y su estado en el sistema.
+	\begin{enumerate}[label=\textbf{RF-1.\arabic*}]
+		\item El sistema llevará un control de los arrendadores y los inmuebles asociados a cada uno.
+		\item Necesitamos una lista de los arrendadores con su información de contacto, DNI e IBAN de la cuenta bancaria en la que ingresar los alquileres, además de si pertenecen o no al sistema de intercambios.
+		\begin{enumerate}[label=\textbf{RF1.2.\arabic*}]
+			\item Cada uno tendrá además una lista de deseos de viviendas en el programa de intercambio, en caso de pertenecer a éste.
+		\end{enumerate}
+		\item Alta. Se registra un nuevo arrendador, con sus datos correspondientes
+		\item Baja. Se da de baja un arrendador, se borran todos sus datos excepto los datos de contacto e IBAN\@.
+		\item Baja total: Se da de baja un arrendador, se borran todos sus datos.
+		\item Consultar datos de arrendador: Se muestran los datos de un arrendador existente.
+		\item Modificar datos de arrendador: Se modifican los datos almacenados del arrendador correspondiente.
+	\end{enumerate}
+	\item\textbf{Gestión de Propiedades:} El sistema deberá llevar una gestión tanto de las propiedades disponibles en el sistema como de su estado de alquiler.
+	\begin{enumerate}[label=\textbf{RF-2.\arabic*}]
+		\item El sistema permitirá llevar un control de las viviendas de los arrendadores y de los arrendatarios asociados a cada una.
+		\begin{enumerate}[label=\textbf{RF-2.1.\arabic*}]
+			\item Necesitamos una lista de viviendas. Cada inmueble alquilado tendrá además un arrendatario asignado de la lista de clientes de la agencia.
+			\item Añadir viviendas a la lista
+			\item Retirar viviendas de la lista
+		\end{enumerate}
+		\item Ver el estado en el que se encuentra cada propiedad (Intercambiada, Alquilada, Disponible, Alquilada con impago (número de meses impagados))
+		\begin{enumerate}[label=\textbf{RF-2.2.\arabic*}]
+			\item Consulta de estado
+			\item Modificar estado
+		\end{enumerate}
+		\item Ver y modificar el alquiler asociado al inmueble.
+		\item Cuando una vivienda arrendada supere el límite de meses impagados, se le enviará una alerta al arrendador y se le ofrecerá la opción de efectuar un desahucio.
+	\end{enumerate}
+	\item\textbf{Gestión de clientes:} El sistema llevará un control de los clientes y de los inmuebles alquilados a cada uno, en caso de estar en situación de arrendamiento. En caso de no estarlo, tendrán una lista de inmuebles deseados.
+	\begin{enumerate}[label=\textbf{RF-3.\arabic*}]
+		\item Se requiere una lista de los arrendatarios con su DNI, información de contacto, estado (en alquiler o buscándolo), vivienda asociada en caso de estar en alquiler, y tipo de contrato de alquiler.
+		\begin{enumerate}[label=\textbf{RF-3.1.\arabic*}]
+			\item Dar de alta a un nuevo cliente.
+			\item Dar de baja a un nuevo cliente
+			\item Consultar datos del cliente, disponibles en la lista.
+		\end{enumerate}
+	\end{enumerate}
+	\item\textbf{Gestión de Agentes Inmobiliarios:} El sistema debe gestionar los agentes que trabajan para la empresa, vacantes y CVs de candidatos.
+	\begin{enumerate}[label=\textbf{RF-4.\arabic*}]
+		\item Dar de alta a un agente
+		\item Dar de baja a un agente, por la razón que sea
+		\item Los agentes necesitarán acceso a la lista de clientes que se encuentren buscando inmuebles, y a su lista de viviendas deseadas.
+		\item Consultar sueldo de agente
+		\item Modificar sueldo de agente
+		\item Existirá una lista de CVs, a la que se dará uso en caso de haber puestos de trabajo disponibles
+		\item Lista de clientes llevados por cada agente
+		\item Número de ventas existosas en el presente meses
+	\end{enumerate}
+	\item\textbf{Publicidad:} El sistema tendrá acceso a la lista de deseos de los clientes/propietarios, y periódicamente les ofrecerá ponerse en contacto con un agente disponible para presentarle el inmueble.
+		\begin{enumerate}[label=\textbf{RF-5.\arabic*}]
+		\item Se le dará la opción al cliente de activar y desactivar dichas alertas, tanto global como individualmente.
+			\begin{enumerate}[label=\textbf{RF-5.1.\arabic*}]
+				\item Si la vivienda deseada es de intercambio, se le ofrecerá entrar en contacto con el propietario en lugar de con un agente.
+			\end{enumerate}
+		\item El sistema publicitará a los clientes viviendas relacionadas con los inmuebles de su lista de deseos.
+		\item Si el cliente es nuevo o no se poseen datos porque el cliente así lo ha requerido, se publicitarán inmuebles acordes a el tipo de vivienda más popular en ese momento.
+		\end{enumerate}
+\end{enumerate}
+
+\subsection{Requisitos no funcionales}
+
+\subsubsection{Usabilidad}
+
+\begin{enumerate}
+	\item La aplicación se basará en los estándares de diseño de Google para ofrecer una navegación intuitiva a usuarios primerizos.
+	\item Las aplicaciones incorporarán opciones de ayuda al navegamiento para discapacitados.
+	\item Se proporcionará un manual de uso para los agentes inmobiliarios que manejen el sistema.
+	\item La aplicación incorporará un tutorial interactivo tanto para arrendadores como arrendatarios para guiarlos a través de los procesos básicos.
+\end{enumerate}
+
+\subsubsection{Fiabilidad}
+
+\begin{enumerate}
+	\item Se realizarán copias de seguridad periódicas de las bases de datos.
+	\item Los contratos se almacenarán en sistemas que prevengan su pérdida.
+\end{enumerate}
+
+\subsubsection{Rendimiento}
+
+\begin{enumerate}
+	\item Las búsquedas de propiedades se realizarán en tiempo constante.
+	\item El sistema deberá actualizar en tiempo real la disponibilidad de las propiedades.
+\end{enumerate}
+
+\subsubsection{Soporte}
+
+\begin{enumerate}
+	\item El sistema incorporará una aplicación CLI para servidores sin cabeza.
+\end{enumerate}
+
+\subsubsection{Implementación}
+
+\begin{enumerate}
+	\item Se debe usar el lenguaje C++ con bibliotecas de compatibilidad con Android e iOS\@.
+	\item Las bases de datos se implementarán en MySQL\@.
+\end{enumerate}
+
+\subsubsection{Interfaz}
+
+\begin{enumerate}
+	\item El sistema enviará periódicamente sus propiedades disponibles a páginas de alquiler generalistas para que se muestren en éstas.
+\end{enumerate}
+
+\subsubsection{Legales}
+
+\begin{enumerate}
+	\item La información personal de los clientes se mantendrá privada en todo momento.
+	\item Los contratos serán privados y confidenciales para usuarios no implicados en ellos.
+\end{enumerate}

@@ -7,12 +7,17 @@
 % Document settings
 
 \usepackage{titling}
-	\author{Fabián González Martín, Raúl Martín Monferrer, Clara María Romero Lara, Atanasio José Rubio Gil}
+	\author{González Martín, Martín Monferrer, Romero Lara, Rubio Gil}
 	\title{Fundamentos\ de\ la\ ingeniería\ del\ software}
 	\date{\today}
 
 \usepackage{enumitem}
 \usepackage[title=\thetitle]{aqademia}
+
+\renewcommand{\thesection}
+				 {\MakeUppercase{\arabic{section}}}
+\renewcommand{\thesubsection}
+				 {\MakeUppercase{\arabic{section}.\arabic{subsection}}}
 
 \aqssec{}
 
@@ -23,10 +28,13 @@
 \aqtitlepage[nolicense]
             {Grado en Ingeniería Informática}
             {Práctica 1: Ingeniería de requisitos, lista inicial de requisitos}
+            {Fabián González Martín, Raúl Martín Monferrer, Clara María Romero Lara, Atanasio José Rubio Gil}
             {}
-\tableofcontents
 
-\input{input/DescripcionGeneralDelProblema.tex}
-\input{input/ListaEstructuradaDeRequisitos.tex}
+\input{input/Glosario.tex}
+\input{input/Descripcion.tex}
+\input{input/Implicados.tex}
+\input{input/Objetivos.tex}
+\input{input/Requisitos.tex}
 
 \end{document}
