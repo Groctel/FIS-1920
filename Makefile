@@ -1,7 +1,6 @@
 HOME  = .
 BIN   = $(HOME)/bin
-
-P1   = $(HOME)/Práctica\ 1
+SRC   = $(HOME)/src
 
 
 # =======================
@@ -40,7 +39,7 @@ define limpiatex
 	@printf "\n"
 endef
 
-all: saludo p1 despedida
+all: saludo practicas despedida
 
 saludo:
 	@printf "\033[35;1m:: \033[0mComenzando compilación\n"
@@ -49,6 +48,6 @@ saludo:
 despedida:
 	@printf "\033[1;32m:: \033[0mCompilación completada con éxito\n"
 
-p1:
-	@$(MAKE) -s -C $(P1)
-	$(call limpiatex, $(P1))
+practicas:
+	@$(MAKE) -s -C $(SRC)
+	$(call limpiatex, $(SRC))
