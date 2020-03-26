@@ -14,8 +14,10 @@
 \usepackage[title=\thetitle]{aqademia}
 \usepackage{colortbl}
 \usepackage{enumitem}
+\usepackage{multirow}
 \usepackage{tabu}
 
+\aqchap{Práctica }
 \aqssec{}
 
 % Document composition
@@ -27,6 +29,7 @@
             {Grado en Ingeniería Informática}
             {Prácticas}
             {}
+\tableofcontents
 
 \chapter{Ingeniería de requisitos: lista incial de requisitos}
 
@@ -39,6 +42,7 @@
 
 \chapter{Ingeniería de requisitos: Modelo de casos de uso}
 
+\input{input/Practica2/Actores.tex}
 \input{input/Practica2/CasosDeUso.tex}
 
 \end{document}

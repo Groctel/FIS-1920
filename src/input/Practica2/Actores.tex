@@ -1,0 +1,182 @@
+\section{Descripción de los actores}
+
+\subsection{Agente inmobiliario}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Agente inmobiliario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-01}} \\
+	\hline
+	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Persona contratada por la agencia inmobiliaria} \\
+	\hline
+	\multirow{2}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Gestiona la relacion entre arrendador y arrendatario} \\
+	                                          & \multicolumn{5}{l|[2pt]}{Revisa la corrección de los anuncios de propiedades} \\
+	\hline
+	\multirow{3}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Agente inmobiliario --- Arrendador} \\
+	                                     & \multicolumn{5}{l|[2pt]}{Agente inmobiliario --- Arrendatario} \\
+	                                     & \multicolumn{5}{l|[2pt]}{Agente inmobiliario --- Intercambiador} \\
+	\hline
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{CU-1, CU-2, CU-3, CU-6, CU-7, CU-8, CU-9, CU-.10, CU-11, CU-12} \\
+	\hline
+	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{3cm}|p{8.81cm}|p{3cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{3}{|[2pt]l|[2pt]}{\textbf{Atributos}} \\
+	\hline
+	\textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo} \\
+	\hline
+	Datos personales & Nombre, Apellido, DNI, correo, teléfono\ldots & Lista de cadenas de caracteres \\
+	\hline
+	Datos de inmobiliaria & Nombre de la inmobiliaria, número de empleado, expediente & Lista de cadenas de caracteres\\
+	\hline
+	Contratos & Contratos que gestiona & Lista de contratos \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Comentarios} \\
+	\hline
+	\\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsection{Arrendador}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Arrendador}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-02}} \\
+	\hline
+	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Persona que pone en alquiler una propiedad de cualquier tipo} \\
+	\hline
+	\multirow{3}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Posee propiedades que registra en el sistema} \\
+	                                          & \multicolumn{5}{l|[2pt]}{Busca un arrendatario} \\
+	                                          & \multicolumn{5}{l|[2pt]}{Tiene un agente inmobiliario asignado} \\
+	\hline
+	\multirow{3}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Arrendador --- Arrendatario} \\
+	                                     & \multicolumn{5}{l|[2pt]}{Arrendador --- Agente inmobiliario} \\
+	                                     & \multicolumn{5}{l|[2pt]}{Arrendador $\longrightarrow$ Intercambiador} \\
+	\hline
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{CU-1, CU-2, CU-3, CU-6, CU-7, CU-8, CU-9, CU-.10, CU-11, CU-12} \\
+	\hline
+	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{3cm}|p{8.81cm}|p{3cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{3}{|[2pt]l|[2pt]}{\textbf{Atributos}} \\
+	\hline
+	\textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo} \\
+	\hline
+	Datos personales & Nombre, Apellido, DNI, correo, teléfono & Lista de cadenas de caracteres \\
+	\hline
+	Publicaciones & Anuncios de propiedades publicados & \\
+	\hline
+	Ubicación & Áreas en las que se ubican sus propiedades & Lista de áreas de coordenadas \\
+	\hline
+	Intercambiador & Condición de registro en el programa de intercambio & Booleano \\
+	\hline
+	Valoración & Media de las valoraciones recibidas por los arrendatarios & Decimal [0-5] \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Comentarios} \\
+	\hline
+	\\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsection{Arrendatario}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Arrendatario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-03}} \\
+	\hline
+	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Persona que alquila una propiedad de cualquier tipo} \\
+	\hline
+	\multirow{2}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Busca propiedades para alquilar} \\
+	                                          & \multicolumn{5}{l|[2pt]}{Tiene un agente inmobiliario asignado} \\
+	\hline
+	\multirow{2}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Arrendatario --- Arrendador} \\
+	                                     & \multicolumn{5}{l|[2pt]}{Arrendatario --- Agente inmobiliario} \\
+	\hline
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{CU-1, CU-2, CU-3, CU-6, CU-7, CU-8, CU-9, CU-.10, CU-11, CU-12} \\
+	\hline
+	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{3cm}|p{8.81cm}|p{3cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{3}{|[2pt]l|[2pt]}{\textbf{Atributos}} \\
+	\hline
+	\textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo} \\
+	\hline
+	Datos personales & Nombre, Apellido, DNI, correo, teléfono & Lista de cadenas de caracteres \\
+	\hline
+	Ubicación & Áreas en las que se ubican sus propiedades & Lista de áreas de coordenadas \\
+	\hline
+	Valoración & Media de las valoraciones recibidas por los arrendadores & Decimal [0-5] \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Comentarios} \\
+	\hline
+	\\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsection{Intercambiador}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Intercambiador}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-03}} \\
+	\hline
+	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Arrendador que forma parte del sistema de intercambios} \\
+	\hline
+	\multirow{2}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Ofrece propiedades para intercambiar} \\
+	                                          & \multicolumn{5}{l|[2pt]}{Intercambia propiedades con otros intercambiadores} \\
+	\hline
+	\multirow{2}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Intercambiador --- Intercambiador} \\
+	                                     & \multicolumn{5}{l|[2pt]}{Intercambiador --- Agente inmobiliario} \\
+	\hline
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{CU-1, CU-2, CU-3, CU-6, CU-7, CU-8, CU-9, CU-.10, CU-11, CU-12} \\
+	\hline
+	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{3cm}|p{8.81cm}|p{3cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{3}{|[2pt]l|[2pt]}{\textbf{Atributos}} \\
+	\hline
+	\textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo} \\
+	\hline
+	Estancias & Registro de anteriores intercambios & \\
+	\hline
+	Valoración & Media de las valoraciones recibidas por los intercambiadores & Decimal [0-5] \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Comentarios} \\
+	\hline
+	\\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
