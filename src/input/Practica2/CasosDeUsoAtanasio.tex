@@ -5,17 +5,17 @@
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Registrar un usuario en la plataforma}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_03}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Registrar un usuario en la plataforma}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_01}} \\
 	\hline
-	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador y arrendatario} \\
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Arrendador o arrendatario (exclusivo)} \\
 	\hline
-	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
 	\hline
 	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-1.3, RF-3.1.1} & \multicolumn{3}{l|[2pt]}{} \\
 	\hline
-	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{} \\
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{} \\
 	\hline
-	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{El usuario queda registrado en la base de datos de la plataforma.} \\
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{El usuario queda registrado en la base de datos de la plataforma.} \\
 	\hline
 	\textbf{Autor}          & Atanasio José Rubio Gil & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
 	\tabucline[2pt]{-}
@@ -34,6 +34,386 @@
 	\textbf{Resumen} \\
 	\hline
 	El usuario introduce sus datos personales y el sistema crea un nuevo registro de la base de datos con ellos, al que le da acceso. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Subir una propiedad a la plataforma}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Subir una propiedad a la plataforma}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_02}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Arrendador} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.1.2} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{El usuario debe estar registrado como arrendador en la plataforma.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{La propiedad queda registrada a nombre del arrendador en la plataforma.} \\
+	\hline
+	\textbf{Autor}          & Atanasio José Rubio Gil & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a un arrendador registrar una propiedad a su nombre en la plataforma. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El arrendador introduce los datos de la propiedad y ésta queda registrada en la plataforma pendiente de aproación. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Gestionar el anuncio de una propiedad}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Gestionar el anuncio de una propiedad}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_03}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Arrendador} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{El arrendador debe poseer al menos una propiedad.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{El estado del anuncio de la propiedad queda actualizado en la plataforma.} \\
+	\hline
+	\textbf{Autor}          & Atanasio José Rubio Gil & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a un arrendador modificar el anuncio de una propiedad a su nombre en la plataforma. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El arrendador introduce los datos del anuncio y éste queda actualizado en la plataforma. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Buscar una propiedad en la plataforma}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Buscar una propiedad en la plataforma}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_04}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Cualquier usuario con o sin cuenta en la plataforma} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{El usuario recibe una lista de propiedades acorde a los parámetros de búsqueda introducidos.} \\
+	\hline
+	\textbf{Autor}          & Atanasio José Rubio Gil & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a cualquier usuario buscar propiedades en la plataforma de acuerdo a unos parámetros. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El usuario introduce unos parámetros de búsqueda en la plataforma y recibe una lista de anuncios que coincida con dichos parámetros. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Solicitar una visita a una propiedad}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Solicitar una visita a una propiedad}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_05}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Arrendador y arrendatario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{El arrendador debe poseer al menos una propiedad.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{El arrendatario abre un canal de comunicación con el arrendador para concertar la visita.} \\
+	\hline
+	\textbf{Autor}          & Atanasio José Rubio Gil & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a cualquier arrendatario comenzar el proceso de concierto de una visita a una propiedad. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El arrendatario introduce una lista de fechas en las que le gustaría concertar una visita y se establece un canal de comunicación directa con el arrendador, que recibe dichas fechas. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Aprobar una propiedad}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Aprobar una propiedad}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_06}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Agente inmobiliario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{La propiedad debe estar en proceso de aprobación.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{La propiedad queda aprobada o rechazada.} \\
+	\hline
+	\textbf{Autor}          & Atanasio José Rubio Gil & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a cualquier agente inmobiliario revisar una propiedad y determinar si es apta o no para su anuncio. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El agente inmobiliario selecciona una propiedad, revisa sus características y elige si aprobarla o rechazarla. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Gestionar un contrato de alquiler}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Gestionar un contrato de alquiler}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_07}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Agente inmobiliario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{El arrendador y el arrendatario deben estar vinculados por un contrato de alquiler o por una solicitud de alquiler aprobada por ambos.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{El estado del alquiler queda actualizado.} \\
+	\hline
+	\textbf{Autor}          & Atanasio José Rubio Gil & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a cualquier agente inmobiliario revisar el estado de un contrato de alquiler y actualizarlo. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El agente inmobiliario selecciona un contrato de alquiler, modifica su estado y se envía una notificación al arrendador y el arrendatario sobre dichos cambios. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Gestionar la reclamación de una deuda}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Gestionar la reclamación de una deuda}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_08}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Agente inmobiliario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{La reclamación de la deuda debe no estar resuelta.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{El estado de la reclamación queda actualizado.} \\
+	\hline
+	\textbf{Autor}          & Atanasio José Rubio Gil & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a cualquier agente inmobiliario revisar el estado de una reclamación de deuda y actualizarlo. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El agente inmobiliario selecciona una reclamación de deuda, modifica su estado y se envía una notificación al arrendador y el arrendatario sobre dichos cambios. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Gestionar la reclamación de una avería}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Gestionar la reclamación de una avería}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_09}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Agente inmobiliario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{La reclamación de la avería debe no estar resuelta.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{El estado de la reclamación queda actualizado.} \\
+	\hline
+	\textbf{Autor}          & Atanasio José Rubio Gil & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a cualquier agente inmobiliario revisar el estado de una reclamación de avería y actualizarlo. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El agente inmobiliario selecciona una reclamación de avería, modifica su estado y se envía una notificación al arrendador y el arrendatario sobre dichos cambios. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Apuntarse al sistema de intercambio de viviendas}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Apuntarse al sistema de intercambio de viviendas}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_10}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Arrendador} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{El arrendador debe no formar parte del sistema de intercambio de viviendas.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{El arrendador pasa a formar parte del sistema de intercambio de viviendas.} \\
+	\hline
+	\textbf{Autor}          & Atanasio José Rubio Gil & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a cualquier arrendador apuntarse al sistema de intercambio de viviendas. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El agente inmobiliario se inscribe en el sistema de intercambio de viviendas seleccionando las viviendas disponibles para intercambiar. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Intercambiar una vivienda}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Apuntarse al sistema de intercambio de viviendas}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_11}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Agente inmobiliario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{Los arrendadores deben no estar intercambiando una vivienda en el momento de realizar la operación.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{Los arrendadores intercambian sus viviendas durante un tiempo determinado.} \\
+	\hline
+	\textbf{Autor}          & Atanasio José Rubio Gil & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a dos arrendadores en el sistema de intercambio de viviendas intercambiar sus viviendas durante un tiempo determinado. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	Ambos arrendatarios seleccionan mutuamente sus viviendas de intercambio y seleccionan el tiempo que desean intercambiarlas. \\
 	\tabucline[2pt]{-}
 \end{tabu}
 \end{center}
