@@ -1,0 +1,419 @@
+\subsection{Clara Mª Romero Lara}
+
+\subsubsection{Registrar un usuario en la plataforma}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Registrar un usuario en la plataforma}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_01}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{ARRENDADOR o ARRENDATARIO} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-1.1, RF-1.3, RF-3.1.1} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{El usuario posee una cuenta en la plataforma.} \\
+	\hline
+	\textbf{Autor}          & Clara Mª Romero & \textbf{Fecha} & 26-03-20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir al usuario poseer una cuenta privada y personal con acceso a toda la funcionalidad de la plataforma. Obtener los datos del mismo para la base de datos. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El usuario se registra con un correo y una contraseña. También añade sus datos personales que se registran en la base de datos de la plataforma. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Subir una propiedad a la plataforma}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Subir una propiedad a la plataforma}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_02}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{ARRENDADOR, agente inmobiliario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RG-2.1.1, RF-2.1.2} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{El arrendador debe poseer una cuenta en la plataforma.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{El usuario queda registrado como arrendador de la propiedad subida. El anuncio de propiedad queda pendiente de moderación.} \\
+	\hline
+	\textbf{Autor}          & Clara Mª Romero & \textbf{Fecha} & 26-03-20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a un usuario pasar a ser arrendador. Mandar a moderación el anuncio de propiedad.\\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El usuario sube una propiedad con sus características. El anuncio se publicará cuando sea aprobado por un agente inmobiliario. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Gestionar el anuncio de una propiedad}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Gestionar el anuncio de una propiedad}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_03}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{ARRENDADOR} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.2.2} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{La propiedad debe haber sido aprobada previamente.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{Los datos del anuncio de propiedad han cambiado} \\
+	\hline
+	\textbf{Autor}          & Clara Mª Romero & \textbf{Fecha} & 28-03-20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir al arrendador de una propiedad cambiar los datos listados en el anuncio de esta. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El arrendador realiza cambios sobre un anuncio de propiedad previamente aprobada. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Buscar una propiedad en la plataforma}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Buscar una propiedad en la plataforma}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_04}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{ARRENDATARIO(usuario)} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.2, RF-2.2.1} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{Introducir unos parámetros de búsqueda.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{Se devuelve una lista de propiedad que se ajusta a los parámetros dados.} \\
+	\hline
+	\textbf{Autor}          & Clara Mª Romero & \textbf{Fecha} & 28-03-20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a cualquier usuario de la plataforma buscar propiedades específicas. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	Se introducen unos parámetros de búsqueda mínimos. En caso de que no se dieran, se mostraría una lista de las propiedades subidas recientemente. Se devuelve una lista ajustada a los parámetros proporcionados.  \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Solicitar una visita a una propiedad}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Solicitar una visita a una propiedad}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_05}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{ARRENDATARIO, arrendador} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{La propiedad debe existir y estar disponible.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{Se abre una vía de comunicación arrendador-arrendatario. Se estipula (o no) una visita} \\
+	\hline
+	\textbf{Autor}          & Clara Mª Romero & \textbf{Fecha} & 28-03-20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir avanzar en el proceso de alquiler abriendo la comunicación arrendador-(posible) arrendatario. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El posible arrendatario manda una solicitud de visita. El arrendador debe aceptar o denegar esta solicitud tras hablar por mensajería incorporada en la plataforma con el posible arrendatario. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Aprobar una propiedad}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Aprobar una propiedad}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_06}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{AGENTE INMOBILIARIO, arrendador} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.1, RF-2.2, RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{El arrendador debe haber mandado a moderación el anuncio de propiedad.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{Se publica (o no) el anuncio de propiedad} \\
+	\hline
+	\textbf{Autor}          & Clara Mª Romero & \textbf{Fecha} & 28-03-20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a un agente inmobiliario asignarse una propiedad si publica el anuncio de esta. No permitir publicaciones fraudulentas o incorrectas. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El arrendador manda a moderación el anuncio. Un agente inmobiliario, posterior a la revisión del anuncio, decide si publicarlo o no.  \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Gestionar un contrato de alquiler}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Gestionar un contrato de alquiler}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_07}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{AGENTE INMOBILIARIO, arrendador, arrendatario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.1, RF-2.2, RF-2.2.2, RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{Arrendador y arrendatario solicitan la formalización del alquiler de la propiedad.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{Se crea o modifica el contrato de alquiler pertinente. } \\
+	\hline
+	\textbf{Autor}          & Clara Mª Romero & \textbf{Fecha} & 28-03-20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	El contrato de alquiler se crea o modifica según las demandas de arrendador y arrendatario. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El agente inmobiliario recibe la petición de arrendador y arrendatario, crea o revisa el contrato para adaptarlo a las necesidades de los implicados y la propiedad y requiere que ambos implicados firmen el nuevo contrato. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Gestionar la reclamación de una deuda}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Gestionar la reclamación de una deuda}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_08}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{AGENTE INMOBILIARIO, arrendador, arrendatario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.2, RF-2.4RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{El arrendador ha puesto una reclamación de deuda.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{Se crea/actualiza el estado de la reclamación} \\
+	\hline
+	\textbf{Autor}          & Clara Mª Romero & \textbf{Fecha} & 28-03-20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir al agente inmobiliario gestionar las reclamaciones. Permitir al arrendador solicitar una reclamación por impago. Notificar al arrendatario de esta misma reclamación. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El agente inmobiliario asignado revisa la reclamación y actualiza su estado. Los estados posibles son: en revisión, cerrada, pendiente de pago.  \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Gestionar la reclamación de una avería}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Gestionar la reclamación de una avería}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_09}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{AGENTE INMOBILIARIO, arrendatario, arrendador} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.2.1, RF-2.2.2, RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{El arrendatario ha solicitado mantenimiento} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{Se crea/actualiza el estado de la reclamación} \\
+	\hline
+	\textbf{Autor}          & Clara Mª Romero & \textbf{Fecha} & 28-03-20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir al agente inmobiliario gestionar las reclamaciones. Permitir al arrendatario solicitar mantenimiento de la propiedad por avería. Notificar al arrendador o al seguro de esta misma reclamación. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El agente inmobiliario asignado revisa la reclamación y actualiza su estado. Los estados posibles son: en revisión, cerrada, cubierta por el seguro, no cubierta.  \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Apuntarse al sistema de intercambio de viviendas}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Apuntarse al sistema de intercambio de viviendas}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_10}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{ARRENDADOR >>intercambiador } \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-1.2, RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{El arrendador está registrado. El arrendador tiene al menos una vivienda disponible} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{El arrendador pasa a ser parte del sistema de intercambios. Las viviendas de este se ven disponibles para intercambio} \\
+	\hline
+	\textbf{Autor}          & Clara Mª Romero & \textbf{Fecha} & 28-03-20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a los arrendadores ser además intercambiadores. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El arrendatario pasa a ser parte del programa de intercambio. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsubsection{Intercambiar una vivienda}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Apuntarse al sistema de intercambio de viviendas}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_11}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{INTERCAMBIADOR(2), agente inmobiliario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{Los dos intercambiadores solicitan intercambio de vivienda} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{Los intercambiadores intercambian sus viviendas.} \\
+	\hline
+	\textbf{Autor}          & Clara Mª Romero & \textbf{Fecha} & 28-03-20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a dos intercambiadores hacer uso del programa de intercambio. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	Ambos intercambiadores rellenan una plantilla de contrato disponible para el programa de intercambio. Un agente inmobiliario es notificado de la solicitud, pero estas son preaprobadas por defecto. Los intercambiadores intercambian sus casas por un periodo de tiempo no superior a tres meses. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
