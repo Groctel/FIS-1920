@@ -1,4 +1,4 @@
-\subsection{Atanasio José Rubio Gil}
+\section{Atanasio José Rubio Gil}\label{casos-de-uso-atanasio}
 
 \subsubsection{Registrar un usuario en la plataforma}
 
@@ -7,11 +7,11 @@
 	\tabucline[2pt]{-}
 	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Registrar un usuario en la plataforma}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_01}} \\
 	\hline
-	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Arrendador o arrendatario (exclusivo)} \\
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Arrendador(\ref{actor-arrendador}) o arrendatario(\ref{actor-arrendatario}) (exclusivo)} \\
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-1.3, RF-3.1.1} & \multicolumn{3}{l|[2pt]}{} \\
+	\textbf{Referencias}    & \multicolumn{2}{l|}{\ref{alta-arrendadores}, \ref{alta-cliente}} & \multicolumn{3}{l|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{} \\
 	\hline
@@ -45,11 +45,11 @@
 	\tabucline[2pt]{-}
 	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Subir una propiedad a la plataforma}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_02}} \\
 	\hline
-	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Arrendador} \\
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Arrendador(\ref{actor-arrendador})} \\
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.1.2} & \multicolumn{3}{l|[2pt]}{} \\
+	\textbf{Referencias}    & \multicolumn{2}{l|}{\ref{adicion-viviendas}} & \multicolumn{3}{l|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{El usuario debe estar registrado como arrendador en la plataforma.} \\
 	\hline
@@ -83,11 +83,11 @@
 	\tabucline[2pt]{-}
 	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Gestionar el anuncio de una propiedad}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_03}} \\
 	\hline
-	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Arrendador} \\
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Arrendador(\ref{actor-arrendador})} \\
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\textbf{Referencias}    & \multicolumn{2}{l|}{\ref{modificacion-anuncio}} & \multicolumn{3}{l|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{El arrendador debe poseer al menos una propiedad.} \\
 	\hline
@@ -125,7 +125,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\textbf{Referencias}    & \multicolumn{2}{l|}{\ref{lista-viviendas}, \ref{consulta-estado-propiedad}} & \multicolumn{3}{l|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{} \\
 	\hline
@@ -159,11 +159,11 @@
 	\tabucline[2pt]{-}
 	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Solicitar una visita a una propiedad}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_05}} \\
 	\hline
-	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Arrendador y arrendatario} \\
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Arrendador(\ref{actor-arrendador}) y arrendatario(\ref{actor-arrendatario})} \\
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\textbf{Referencias}    & \multicolumn{2}{l|}{\ref{lista-deseos-clientes}, \ref{consulta-estado-propiedad}, \ref{lista-clientes}} & \multicolumn{3}{l|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{El arrendador debe poseer al menos una propiedad.} \\
 	\hline
@@ -197,11 +197,11 @@
 	\tabucline[2pt]{-}
 	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Aprobar una propiedad}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_06}} \\
 	\hline
-	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Agente inmobiliario} \\
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Agente inmobiliario(\ref{actor-agente-inmobiliario})} \\
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\textbf{Referencias}    & \multicolumn{2}{l|}{\ref{control-viviendas}, \ref{estado-propiedad}} & \multicolumn{3}{l|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{La propiedad debe estar en proceso de aprobación.} \\
 	\hline
@@ -235,11 +235,11 @@
 	\tabucline[2pt]{-}
 	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Gestionar un contrato de alquiler}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_07}} \\
 	\hline
-	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Agente inmobiliario} \\
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Agente inmobiliario(\ref{actor-agente-inmobiliario})} \\
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\textbf{Referencias}    & \multicolumn{2}{l|}{\ref{consulta-estado-propiedad}, \ref{modificacion-estado-propiedad}, \ref{modificacion-alquiler}} & \multicolumn{3}{l|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{El arrendador y el arrendatario deben estar vinculados por un contrato de alquiler o por una solicitud de alquiler aprobada por ambos.} \\
 	\hline
@@ -273,11 +273,11 @@
 	\tabucline[2pt]{-}
 	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Gestionar la reclamación de una deuda}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_08}} \\
 	\hline
-	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Agente inmobiliario} \\
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Agente inmobiliario(\ref{actor-agente-inmobiliario})} \\
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\textbf{Referencias}    & \multicolumn{2}{l|}{\ref{alerta-impago}} & \multicolumn{3}{l|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{La reclamación de la deuda debe no estar resuelta.} \\
 	\hline
@@ -311,11 +311,11 @@
 	\tabucline[2pt]{-}
 	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Gestionar la reclamación de una avería}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_09}} \\
 	\hline
-	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Agente inmobiliario} \\
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Agente inmobiliario(\ref{actor-agente-inmobiliario})} \\
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\textbf{Referencias}    & \multicolumn{2}{l|}{\ref{consulta-estado-propiedad}, \ref{modificacion-estado-propiedad}} & \multicolumn{3}{l|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{La reclamación de la avería debe no estar resuelta.} \\
 	\hline
@@ -349,11 +349,11 @@
 	\tabucline[2pt]{-}
 	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Apuntarse al sistema de intercambio de viviendas}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_10}} \\
 	\hline
-	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Arrendador} \\
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Arrendador(\ref{actor-arrendador})} \\
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\textbf{Referencias}    & \multicolumn{2}{l|}{\ref{lista-arrendadores}} & \multicolumn{3}{l|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{El arrendador debe no formar parte del sistema de intercambio de viviendas.} \\
 	\hline
@@ -387,11 +387,11 @@
 	\tabucline[2pt]{-}
 	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Apuntarse al sistema de intercambio de viviendas}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_11}} \\
 	\hline
-	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Agente inmobiliario} \\
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{Agente inmobiliario(\ref{actor-agente-inmobiliario})} \\
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{} \\
+	\textbf{Referencias}    & \multicolumn{2}{l|}{\ref{contacto-intercambio}} & \multicolumn{3}{l|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{Los arrendadores deben no estar intercambiando una vivienda en el momento de realizar la operación.} \\
 	\hline

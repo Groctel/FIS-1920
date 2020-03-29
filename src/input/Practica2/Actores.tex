@@ -1,11 +1,14 @@
-\section{Descripción de los actores}
+\section{Descripción de los actores}\label{descripcion-de-los-actores}
+
+\renewcommand{\thesubsection}
+				 {ACT-0\arabic{subsection}}
 
 \subsection{Agente inmobiliario}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Agente inmobiliario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-01}} \\
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Agente inmobiliario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-01}\label{actor-agente-inmobiliario}} \\
 	\hline
 	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Persona contratada por la agencia inmobiliaria} \\
 	\hline
@@ -16,7 +19,7 @@
 	                                     & \multicolumn{5}{l|[2pt]}{Agente inmobiliario --- Arrendatario} \\
 	                                     & \multicolumn{5}{l|[2pt]}{Agente inmobiliario --- Intercambiador} \\
 	\hline
-	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{CU-1, CU-2, CU-3, CU-6, CU-7, CU-8, CU-9, CU-.10, CU-11, CU-12} \\
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{\ref{caso-uso-subir-propiedad}, \ref{caso-uso-aprobar-propiedad}, \ref{caso-uso-gestionar-contrato}, \ref{caso-uso-gestionar-reclamacion-deuda}, \ref{caso-uso-gestionar-reclamacion-averia}, \ref{caso-uso-intercambiar-vivienda}} \\
 	\hline
 	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
 	\tabucline[2pt]{-}
@@ -50,7 +53,7 @@
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Arrendador}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-02}} \\
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Arrendador}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-02}\label{actor-arrendador}} \\
 	\hline
 	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Persona que pone en alquiler una propiedad de cualquier tipo} \\
 	\hline
@@ -62,7 +65,7 @@
 	                                     & \multicolumn{5}{l|[2pt]}{Arrendador --- Agente inmobiliario} \\
 	                                     & \multicolumn{5}{l|[2pt]}{Arrendador $\longrightarrow$ Intercambiador} \\
 	\hline
-	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{CU-1, CU-2, CU-3, CU-6, CU-7, CU-8, CU-9, CU-.10, CU-11, CU-12} \\
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{\ref{caso-uso-registrar-usuario}, \ref{caso-uso-subir-propiedad}, \ref{caso-uso-gestionar-anuncio}, \ref{caso-uso-solicitar-visita}, \ref{caso-uso-aprobar-propiedad}, \ref{caso-uso-gestionar-contrato}, \ref{caso-uso-gestionar-reclamacion-deuda}, \ref{caso-uso-gestionar-reclamacion-averia}, \ref{caso-uso-apuntarse-intercambio}} \\
 	\hline
 	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
 	\tabucline[2pt]{-}
@@ -100,7 +103,7 @@
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Arrendatario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-03}} \\
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Arrendatario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-03}\label{actor-arrendatario}} \\
 	\hline
 	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Persona que alquila una propiedad de cualquier tipo} \\
 	\hline
@@ -110,7 +113,7 @@
 	\multirow{2}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Arrendatario --- Arrendador} \\
 	                                     & \multicolumn{5}{l|[2pt]}{Arrendatario --- Agente inmobiliario} \\
 	\hline
-	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{CU-1, CU-2, CU-3, CU-6, CU-7, CU-8, CU-9, CU-.10, CU-11, CU-12} \\
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{\ref{caso-uso-registrar-usuario}, \ref{caso-uso-buscar-propiedad}, \ref{caso-uso-solicitar-visita}, \ref{caso-uso-gestionar-contrato}, \ref{caso-uso-gestionar-reclamacion-deuda}, \ref{caso-uso-gestionar-reclamacion-averia}} \\
 	\hline
 	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
 	\tabucline[2pt]{-}
@@ -144,7 +147,7 @@
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Intercambiador}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-03}} \\
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Intercambiador}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-04}\label{actor-intercambiador}} \\
 	\hline
 	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Arrendador que forma parte del sistema de intercambios} \\
 	\hline
@@ -154,7 +157,7 @@
 	\multirow{2}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Intercambiador --- Intercambiador} \\
 	                                     & \multicolumn{5}{l|[2pt]}{Intercambiador --- Agente inmobiliario} \\
 	\hline
-	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{CU-1, CU-2, CU-3, CU-6, CU-7, CU-8, CU-9, CU-.10, CU-11, CU-12} \\
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{\ref{caso-uso-intercambiar-vivienda}} \\
 	\hline
 	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
 	\tabucline[2pt]{-}
@@ -180,3 +183,6 @@
 	\tabucline[2pt]{-}
 \end{tabu}
 \end{center}
+
+\renewcommand{\thesubsection}
+             {\arabic{chapter}.\arabic{section}.\arabic{subsection}}
