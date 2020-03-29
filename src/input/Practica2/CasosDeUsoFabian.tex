@@ -5,19 +5,19 @@
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Registrar un usuario en la plataforma}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_03}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Registrar un usuario en la plataforma}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_01}} \\
 	\hline
-	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador y arrendatario} \\
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador} \\
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-1.3, RF-3.1.1} & \multicolumn{3}{l|[2pt]}{} \\
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-1.3} & \multicolumn{3}{l|[2pt]}{                } \\
 	\hline
-	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{} \\
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{El usuario debe no estar registrado en la plataforma} \\
 	\hline
 	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{El usuario queda registrado en la base de datos de la plataforma.} \\
 	\hline
-	\textbf{Autor}          & Fabián González Martín & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\textbf{Autor}          & Fabián González Martín & \textbf{Fecha} & 27/03/20 & \textbf{Versión} & 1.0 \\
 	\tabucline[2pt]{-}
 \end{tabu}
 
@@ -25,7 +25,7 @@
 	\tabucline[2pt]{-}
 	\textbf{Propósito} \\
 	\hline
-	Permitir a un usuario registrarse en la base de datos de la plataforma para poder operar en ella con una cuenta de usuario. \\
+	Permitir a un usuario registrarse en la plataforma para poder operar en ella con una cuenta de arrendador. \\
 	\tabucline[2pt]{-}
 \end{tabu}
 
@@ -33,7 +33,447 @@
 	\tabucline[2pt]{-}
 	\textbf{Resumen} \\
 	\hline
-	El usuario introduce sus datos personales y el sistema crea un nuevo registro de la base de datos con ellos, al que le da acceso. \\
+	El usuario introduce sus datos personales básicos como mínimo, y unos datos de aaceso, para quedar registrado en la plataforma y poder usarla. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+
+
+\subsubsection{Subir una propiedad a la plataforma}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Subir una propiedad a la plataforma}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_02}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.1.2} & \multicolumn{3}{l|[2pt]}{                } \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{El usuario debe constar como arrendador en la base de datos.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{Se crea una nueva propiedad registrada a nombre del usuario en la base de datos de la plataforma.} \\
+	\hline
+	\textbf{Autor}          & Fabián González Martín & \textbf{Fecha} & 27/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a un usuario arrendador subir una propiedad a la plataforma. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El usuario, que debe estar registrado como arrendador, sube a la plataforma una propiedad a su nombre. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+
+
+\subsubsection{Gestionar los anuncios de las propiedades}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Gestionar los anuncios de las propiedades}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_03}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.5} & \multicolumn{3}{l|[2pt]}{                } \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{Estar registrado como arrendador y poseer alguna propiedad.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{El anuncio de la propiedad es creado o modificado de ya existir.} \\
+	\hline
+	\textbf{Autor}          & Fabián González Martín & \textbf{Fecha} & 27/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a un usuario arrendador gestionar los anuncios existentes de sus propiedades, y crear nuevos. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El arrendador crea un anuncio, o modifica uno ya existente y este queda registrado en la plataforma. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+
+
+\subsubsection{Registrar un usuario en la plataforma}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Registrar un usuario en la plataforma}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_04}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendatario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-3.1.1} & \multicolumn{3}{l|[2pt]}{                } \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{El usuario debe no estar registrado en la plataforma} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{El usuario queda registrado en la base de datos de la plataforma.} \\
+	\hline
+	\textbf{Autor}          & Fabián González Martín & \textbf{Fecha} & 27/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a un usuario registrarse en la plataforma para poder operar en ella con una cuenta de arrendatario. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El usuario introduce sus datos personales básicos como mínimo, y unos datos de aaceso, para quedar registrado en la plataforma y poder usarla. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+
+
+\subsubsection{Buscar una propiedad en  la plataforma}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Buscar una propiedad en  la plataforma}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_05}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador y arrendatario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.1.1, RF-2.2} & \multicolumn{3}{l|[2pt]}{                } \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{                } \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{El usuario recibe una lista de viviendas filtrada según sus parámetros de búsqueda.} \\
+	\hline
+	\textbf{Autor}          & Fabián González Martín & \textbf{Fecha} & 27/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a un usuario buscar viviendas en la plataforma, filtrándolas de acuerdo a los parámetros introducidos. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El usuario introduce unos parámetros de búsqueda y se le ofrecen como resultado anuncios que los satisfagan. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+
+
+\subsubsection{Solicitar una visita}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Solicitar una visita}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_06}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador y arrendatario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-1.2.1, RF-2.2, RF-4.3} & \multicolumn{3}{l|[2pt]}{                } \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{La propiedad debe encontrarse disponible.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{El usuario contacta con un agente inmobiliario para concertar la visita.} \\
+	\hline
+	\textbf{Autor}          & Fabián González Martín & \textbf{Fecha} & 27/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a un usuario concertar una visita a una propiedad en la que esté interesado. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El usuario entra en contacto con un agente inmobiliario y se establece una fecha para la visita. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+
+
+\subsubsection{Aprobar una propiedad}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Aprobar una propiedad}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_07}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Agente Inmobiliario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.1.2} & \multicolumn{3}{l|[2pt]}{                } \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{La propiedad debe de estar a la espera de ser aprobada.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{La propiedad queda aprobada o rechazada.} \\
+	\hline
+	\textbf{Autor}          & Fabián González Martín & \textbf{Fecha} & 27/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a un agente revisar la propiedad, ver si es apta y dejarlo reflejado en la plataforma. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El agente revisa una propiedad, y decide si es aprobada o rechazada. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+
+
+\subsubsection{Generar un contrato de alquiler}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Generar un contrato de alquiler}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_08}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Agente Inmobiliario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.2, RF-2.2.2, RF-2.3} & \multicolumn{3}{l|[2pt]}{                } \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{El arrendador y arrendatario deben estar vinculados por una solicitud de alquiler aprobada por ambos.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{Se genera un contrato de alquiler que vincula a ambos y se actualiza el estado de la propiedad.} \\
+	\hline
+	\textbf{Autor}          & Fabián González Martín & \textbf{Fecha} & 27/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a un agente generar un contrato de alquiler entre arrendador y arrendatario. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El agente crea el contrato, lo verifica y modifica el estado de la propiedad asociada, pasando a alquilada. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+
+
+\subsubsection{Gestionar la reclamación de la deuda}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Gestionar la reclamación de la deuda}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_09}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Agente Inmobiliario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.2, RF-2.4} & \multicolumn{3}{l|[2pt]}{                } \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{Debe existir una deuda} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{Se crea una reclamación o se modifica una existente.} \\
+	\hline
+	\textbf{Autor}          & Fabián González Martín & \textbf{Fecha} & 27/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a un agente crear o modificar una reclamación de deuda. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El agente selecciona una propiedad impagada, crea o modifica la reclamación de la deuda y notifica a arrenda y arrendatario sobre la reclamación. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+
+
+\subsubsection{Gestionar la reclamación de averías}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Gestionar la reclamación de averías}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_10}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Agente Inmobiliario} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.2.1} & \multicolumn{3}{l|[2pt]}{                } \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{Debe existir una avería} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{Se crea o actualiza una reclamación.} \\
+	\hline
+	\textbf{Autor}          & Fabián González Martín & \textbf{Fecha} & 27/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a un agente crear o modificar una reclamación de avería. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El agente crea o modifica una reclamación y notifica a arrendador y arrendatario. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+
+
+\subsubsection{Apuntarse al sistema de intercambio de viviendas}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Apuntarse al sistema de intercambio de viviendas}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_11}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-1.2, RF-1.7} & \multicolumn{3}{l|[2pt]}{                } \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{El arrendador no debe estar apuntado en el sistema de intercambio.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{El arrendador pasa a ser miembro del sistema de inercambios.} \\
+	\hline
+	\textbf{Autor}          & Fabián González Martín & \textbf{Fecha} & 27/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a un usuario arrendador registrarse en el sistema de inercambios. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	El arrendador se inscribe en el sistema de intercambio de viviendas, seleccioando cuáles quiere intercambiar. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+
+
+\subsubsection{Intercambiar una vivienda}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{Intercambiar una vivienda}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{CU\_12}} \\
+	\hline
+	\textbf{Actores}        & \multicolumn{5}{l|[2pt]}{Arrendador} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{l|[2pt]}{Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{l|}{RF-2.2} & \multicolumn{3}{l|[2pt]}{                } \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{l|[2pt]}{Los arrendadores no deben estar intercambiando viviendas en ese momento.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{l|[2pt]}{Los arrendadores intercambian vivenda por un tiempo.} \\
+	\hline
+	\textbf{Autor}          & Fabián González Martín & \textbf{Fecha} & 27/03/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\hline
+	Permitir a dos arrendadores intercambiar sus viviendas durante un tiempo determinado \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\hline
+	Ambos arrendatarios seleccionan una vivienda y el tiempo que desean intercambiar. \\
 	\tabucline[2pt]{-}
 \end{tabu}
 \end{center}
