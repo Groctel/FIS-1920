@@ -12,6 +12,8 @@
 	\date{\today}
 
 \usepackage[title=\thetitle]{aqademia}
+\usepackage{array}
+	\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 \usepackage{colortbl}
 \usepackage{enumitem}
 \usepackage{graphicx}
@@ -59,5 +61,8 @@
 \input{input/Practica2/CasosDeUsoFabian.tex}
 \input{input/Practica2/CasosDeUsoClara.tex}
 \input{input/Practica2/CasosDeUsoAtanasio.tex}
+
+\chapter{Plantillas}
+\input{plantillas/CasoDeUso.tex}
 
 \end{document}
