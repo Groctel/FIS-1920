@@ -1,0 +1,347 @@
+\subsection{\texttt{GestiónViviendasIntercambio}}
+
+\subsubsection{\texttt{AltaViviendaIntercambio}}\label{alta-vivienda-intercambio}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{AltaViviendaIntercambio}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small\ref{adicion-viviendas},~\ref{modificacion-anuncio}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{asignar-guest-points}} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La vivienda debe estar registrada sin alquilar o no estar registrada.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La vivienda queda registrada como vivienda de intercambio.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Permitir que un miembro registre una vivienda a su nombre como vivienda de intercambio. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El miembro toma una vivienda dada de alta o da de alta una vivienda y la asigna como vivienda de intercambio. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El miembro selecciona una de sus viviendas} & \textbf{2} & {\small El sistema añade la vivienda al programa de intercambio.} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\textbf{1a} & \multicolumn{4}{p{14.6cm}|[2pt]}{La vivienda no se encuentra registrada en la plataforma.} \\
+	\hline
+	\textbf{}   & \multicolumn{4}{p{14.6cm}|[2pt]}{1. El miembro sube una vivienda a la plataforma \textit{Incluir ID.NOMBRE}.} \\
+	\hline
+	\textbf{1b} & \multicolumn{4}{p{14.6cm}|[2pt]}{La vivienda se encuentra alquilada.} \\
+	\hline
+	\textbf{}   & \multicolumn{4}{p{14.6cm}|[2pt]}{1. El sistema informa de esto y finaliza el caso de uso.} \\
+	\hline
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Varias veces al día} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Alta} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Moderada} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+\subsubsection{\texttt{AsignarGuestPoints}}\label{asignar-guest-points}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{ArignarGuestPoints}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Se añaden \textit{GuestPoints} a la cuenta del miembro.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Añadir \textit{GuestPoints} a la cuenta de un miembro. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El sistema añade una cantidad de \textit{GuestPoints} a la cuenta de un miembro. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	           & & \textbf{1} & {\small El sistema calcula los \textit{GuestPoints} a añadir y los suma a la cuenta del miembro.} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	            & \multicolumn{4}{p{14.6cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Tantas veces como se añada o modifique una vivienda de intercambio} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+\subsubsection{\texttt{BajaViviendaIntercambio}}\label{baja-vivienda-intercambio}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{BajaViviendaIntercambio}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La vivienda a dar de baja debe estar registrada en el programa de intercambio.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La vivienda deja de formar parte del programa de intercambio.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Dar de baja una vivienda del programa de intercambio. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El miembro toma una vivienda suya en el programa de intercambio y la elimina del mismo. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El miembro selecciona una de sus viviendas del programa de intercambio.} & \textbf{2} & {\small El sistema elimina la vivienda del programa de intercambio.} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\textbf{1a} & \multicolumn{4}{p{14.6cm}|[2pt]}{La vivienda no se encuentra en el programa de intercambio.} \\
+					& \multicolumn{4}{p{14.6cm}|[2pt]}{1. El sistema informa de esto y finaliza el caso de uso.} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Como máximo tantas veces como viviendas dadas de alta en el programa de intercambios} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Instantáneo} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Alta} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Moderada} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su implementación} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+\subsubsection{\texttt{ModificarViviendaIntercambio}}\label{modificar-vivienda-intercambio}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{ModificarViviendaIntercambio}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La vivienda debe estar registrada en el programa de intercambio.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El estado da vivienda queda modificado.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Modificar el estado de una vivienda en el programa de intercambio. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El miembro elige una vivienda en el programa de intercambio y modifica su estado. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El miembro elige una vivienda en el programa de intercambio y modifica su estado.} & \textbf{2} & {\small El sistema modifica el estado de la vivienda.} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\textbf{1a} & \multicolumn{4}{p{14.6cm}|[2pt]}{La vivienda seleccionada no está en el programa de intercambio.} \\
+	            & \multicolumn{4}{p{14.6cm}|[2pt]}{1. El sistema informa de esto y finaliza el caso de uso.} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Varias veces por semana} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Alta} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Moderada} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+\subsubsection{\texttt{ValidarViviendasIntercambio}}\label{validar-viviendas-intercambio}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{ValidarViviendasIntercambio}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Administrativo} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La vivienda debe estar pendiente de validación en el programa de intercambio.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La vivienda queda validada o rechazada en el programa de intercambio.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Validar una vivienda en el programa de intercambio. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El administrativo selecciona una vivienda pendiente de validación y la valida o la rechaza. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El administrativo selecciona una vivienda del programa de intercambio y la valida o la rechaza.} & \textbf{2} & {\small El sistema marca como validad o rechazada la vivienda.} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\textbf{1a} & \multicolumn{4}{p{14.6cm}|[2pt]}{La vivienda no se encuentra pendiente de validación en el programa de intercambio.} \\
+	\hline
+	            & \multicolumn{4}{p{14.6cm}|[2pt]}{1. El sistema informa de esto y finaliza el caso de uso.} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Tantas veces como se añada una vivienda al programa de intercambio} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Máximo un día} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
