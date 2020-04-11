@@ -1,0 +1,919 @@
+\subsection{\texttt{GestiónAlquileres}}
+
+\subsubsection{\texttt{AltaAveria}}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{AltaAveria}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Administrativo, Inquilino} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La vivienda sobre la que se reporta la avería debe estar alquilada.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La avería reportada queda registrada en el sistema.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Informar en la plataforma sobre una avería en la vivienda alquilada. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El inquilino da de alta una avería y el administrativo recibe una alerta y la acepta. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El inquilino rellena un formulario informando sobre la avería.} & \textbf{2} & {\small El sistema envía una notificación al administrativo.} \\
+	\hline
+	\textbf{3} & {\small El administrativo gestiona el alta de la avería e informa a los actores pertinentes.} & & \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	            & \multicolumn{4}{p{14.6cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Varias veces al día} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Notificación inmediata, acción del administrativo en menos de 24h} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+\subsubsection{\texttt{AltaInquilito}}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{AltaInquilito}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Invitado} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{contrato-alquiler}} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El usuario queda registrado como inquilino de una vivienda.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Permitir a un usuario registrarse como inquilino de una vivienda. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El usuario rellena un formulario para derse de alta como inquilito de una vivienda. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El usuario rellena un formulario para darse de alta como inquilino de una vivienda.} & \textbf{2} & {\small El sistema registra al usuario como inquilino de la vivienda.} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Varias veces al día} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+\subsubsection{\texttt{AñadirPagoCuentaCliente}}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{AñadirPagoCuentaCliente}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Administrativo} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Se debe haber realizado un pago y éste no debe estar registrado.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El pago queda registrado en la cuenta del cliente.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Permitir a un administrativo registrar un pago en la cuenta de un cliente. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El administrativo registra un pago a nombre del cliente en su cuenta. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El administrativo rellena un formulario para registrar el pago.} & \textbf{2} & {\small El sistema registra el pago a nombre del cliente.} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Varias veces al día} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+\subsubsection{\texttt{BajaContratoAlquiler}}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{BajaContratoAlquiler}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Administrativo, inquilino} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Debe haber un contrato de alquiler activo.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El contrato queda dado de baja.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Permitir a un administrativo dar de baja un contrato de alquiler. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El inquilino rellena un formulario para dar de baja un alquiler y el administrativo lo hace efectivo. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El inquilino rellena un formulario para dar dar de baja un alquiler} & \textbf{2} & {\small El sistema envía una notifiación al administrativo.} \\
+	\hline
+	\textbf{3} & {\small El administrativo hace efectiva la baja del inquilino.} & & \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Varias veces por semana} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Notificación inmediata y acción del administrativo en menos de 24h} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+\subsubsection{\texttt{BajaInquilino}}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{BajaInquilino}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Administrativo} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El usuario debe estar dado de alta como inquilino en al menos una vivienda.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El usuario deja de estar dado de alta de la vivienda especificada.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Permitir a un adminsitrativo dar de baja a un usuario como inquilino de una vivienda. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El administrativo da de baja a un usuario como inquilino de una vivienda. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El administrativo da de baja a un usuario como inquilino de una propiedad.} & \textbf{2} & {\small El sistema registra al usuario como que ya no es inquilino de la vivienda.} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Varias veces por semana} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+\subsubsection{\texttt{ConsultarContratosAlquiler}}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{ConsultarContratosAlquiler}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Consultar contratos alquiler} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Permitir a un administrativo consultar un contrato de alquiler. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El administrativo consulta un contrato de alquiler. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El administrativo pide al sistema consultar un contrato de alquiler.} & \textbf{2} & {\small El sistema muestra el contrato de alquiler pedido.} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Varias veces al día} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+\subsubsection{\texttt{ContratoAlquiler}}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{ContratoAlquiler}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Administrativo e inquilino} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El inquilino queda vinculado a una vivienda mediante un contrato de alquiler.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Permitir a un alquilino vincularse a una vivienda mediante un contrato de alquiler. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El inquilino rellena un formulario para vincularse a un contrato de alquiler y el administrativo lo hace efectivo. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El inquilino rellena un formulario para vincularse a un contrato de alquiler.} & \textbf{2} & {\small El sistema envía una notificación al administrativo.} \\
+	\hline
+	\textbf{3} & {\small El administrativo hace efectivo el contrato.} & & \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Varias veces por semana} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Notificación del sistema inmediata, acción del administrativo en menos de 24h} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+\subsubsection{\texttt{DevolverFianzaInquilino}}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{DevolverFianzaInquilino}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Administrativo} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El inquilino debe estar dándose de baja de un contrato.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La fianza del inquilino queda devuelta.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Permitir a un administrativo devolverle a un inquilino su fianza tras finalizar un contrato de alquiler. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El administrativo rellena un formulario y devuelve la fianza al inquilino. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El administrativo rellena un formulario para devolver la fianza al inquilino.} & \textbf{2} & {\small El sistema se comunica con el banco para hacer efectiva la devolución.} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Varias veces por semana} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Acción del sistema inmediata, demora del banco indeterminada} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+\subsubsection{\texttt{EnviarRecibosBanco}}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{EnviarRecibosBanco}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Temporizador, Banco} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El recibo debe no haberse enviado aún al banco.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El recibo queda enviado al banco.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Permitir al temporizador enviar un recibo generado a un banco. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El temporizador envía un recibo generado a un banco. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	           & & \textbf{1} & {\small El temporizador envía un recibo generado a un banco} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Una vez al mes por contrato.} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+\subsubsection{\texttt{GenerarRecibosAlquiler}}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{GenerarRecibosAlquiler}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Temporizador} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El recibo queda generado.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Permitir a temporizador generar un recibo automáticamente. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El temporizador selecciona un contrato y genera un recibo para el mismo. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+              & & \textbf{1} & {\small El temporizador selecciona un contrato y genera un recibo para el mismo.} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Una vez al mes por contrato} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+\subsubsection{\texttt{IniciarTrámiteMorosos}}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{IniciarTrámiteMorosos}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Administrativo} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El contrato sobre el que se aplique debe figurar como impagado.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El trámite de cobro de morosos queda iniciado.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Permitir a un administrador iniciar un trámite de cobro a morosos. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El administrador rellena un formulario para iniciar el trámite de cobro a morosos. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El administrador rellena un formulario para iniciar el trámite de cobro a morosos.} & \textbf{2} & {\small El sistema inicia el trámite de cobro a morosos.} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Máximo una vez al mes por contrato} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+\subsubsection{\texttt{ObtenerRecibosCobrados}}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{ObtenerRecibosCobrados}} & \multicolumn{1}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Administrativo, banco} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El recibo debe no haber sido recibido anteriormente por el banco.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El recibo queda recibido por el banco.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Permitir a un administrativo enviar un recibo a un banco y que éste lo reciba. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El administrativo envía el recibo y el banco lo recibe y lo registra. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El administrativo manda a enviar el recibo.} & \textbf{2} & {\small El sistema envía el recibo al banco.} \\
+	\hline
+	\textbf{3} & {\small El banco recibe el recibo y lo registra.} & & \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Una vez al mes por contrato} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+\subsubsection{\texttt{ObtenerRecibosDevueltos}}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{ObtenerRecibosDevueltos}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Administrativo, banco} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El recibo debe no haber sido devuelto con anterioridad.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El recibo queda devuelto al administrativo desde el banco.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Permitir a un banco devolver un recibo a un administrativo. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El banco devuelve el recibo y el administrativo lo recibe y lo registra. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El banco manda a devolver el recibo.} & \textbf{2} & {\small El sistema del banco devuelve el recibo al administrativo.} \\
+	\hline
+	\textbf{3} & {\small El administrativo recibe el recibo y lo registra.} & & \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Como máximo tantas veces como recibos enviados} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+\subsubsection{\texttt{PagarRecibosMetálico}}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{PagarRecibosMetálico}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Administrativo, inquilino} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El recibo debe no estar pagado.} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El recibo queda pagado en metálico.} \\
+	\hline
+	\textbf{Autor}          & {\small Atanasio Rubio} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Permitir a un inquilino pagar un recibo en metálico. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El inquilino paga el recibo y el administrativo lo registra. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El inquilino paga al administrativo el recibo en metálico.} & & {\small } \\
+	\hline
+	\textbf{2} & {\small El administrativo registra el pago.} & \textbf{3} & {\small El sistema registra el pago asociado al inquilino.} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Máximo una vez al mes por contrato} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
