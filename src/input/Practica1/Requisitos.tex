@@ -33,6 +33,8 @@
 		\begin{enumerate}[label=\textbf{RF1.2.\arabic*}]
 			\item Cada uno tendrá además una lista de deseos de viviendas en el programa de intercambio, en caso de pertenecer a éste.\label{lista-deseos-arrendadores}
 			\item Se podrá consultar la lista de intercambios realizados en el programa de intercambio, en caso de pertenecer a éste.\label{lista-intercambios-arrendadores}
+			\item Cada miembro del programa de intercambio puede consultar en cualquier momento sus GuestPoints y dónde los obtuvo.\label{consulta-GuestPoints}
+			\item Cada miembro del programa de intercambio recibe nada más registrarse un total de 100 GuestPoints más los que reciba por la valoración de su vivienda.\label{GuestPoints-predeterminados}
 		\end{enumerate}
 		\item Alta. Se registra un nuevo arrendador, con sus datos correspondientes.\label{alta-arrendadores}
 		\item Baja. Se da de baja un arrendador, se borran todos sus datos excepto los datos de contacto e IBAN\@.\label{baja-arrendadores}
@@ -65,7 +67,14 @@
 			\item Dar de alta a un nuevo cliente.\label{alta-cliente}
 			\item Dar de baja a un nuevo cliente\label{baja-cliente}
 			\item Consultar datos del cliente, disponibles en la lista.\label{consulta-datos-cliente}
-			\item Modificar datos del cliente, disponibles en la lista.\label{modificar-datos-cliente}
+			\item Modificar datos del cliente.\label{modificar-datos-cliente}
+		\end{enumerate}
+		\item Cuando un cliente pasa a ser inquilino, es tratado por el sistema como una entidad a parte. Podremos acceder a una lista similar a la de los arrendatarios, pero con nueva información\label{lista-inquilinos}
+		\begin{enumerate}[label=\textbf{RF-3.2.\arabic*}]
+			\item Dar de alta a un inquilino.\label{alta-inquilino}
+			\item Dar de baja a un inquilino\label{baja-inquilino}
+			\item Consultar datos del inquilino, disponibles en la lista.\label{consulta-datos-inquilino}
+			\item Modificar datos del inquilino.\label{modificar-datos-inquilino}
 		\end{enumerate}
 	\end{enumerate}
 	\item\textbf{Gestión de Agentes Inmobiliarios:} El sistema debe gestionar los agentes que trabajan para la empresa, vacantes y CVs de candidatos.\label{gestion-agentes-inmobiliarios}
@@ -90,7 +99,16 @@
 		\item Una vez el arrendador tiene una oferta de alquiler de vivienda dada de alta, el anuncio en la plataforma se generará automáticamente.\label{generar-anuncio}
 		\end{enumerate}
 \end{enumerate}
-
+\item\textbf{Gestión de pagos:} El sistema mantendrá un registro de los pagos asociados a una vivienda.\label{registro-pagos}
+	\begin{enumerate}[label=\textbf{RF-5.\arabic*}]
+	\item El sistema generará y enviará automáticamente los recibos de pago al banco asociado al contrato.\label{enviar-banco}
+		\begin{enumerate}[label=\textbf{RF-5.1.\arabic*}]
+			\item Si estos mismos recibos fueran considerados incorrectos por la entidad bancaria, un agente inmobiliario revisará personalmente el recibo y se pondrá en contacto con ambas partes del contrato.\label{recibo-incorrecto}
+		\end{enumerate}
+	\item Los pagos se pueden efectuar automáticamente mediante transferencia con tarjeta asociada a la cuenta o en metálico con un sistema de confirmación de recibo por ambas partes.\label{pago-efectivo-tarjeta}
+	\item El pago y cobro de fianzas se ejecutará siempre mediante trasnferencia.\label{fianza}
+	\end{enumerate}
+\end{enumerate}
 \subsection{Requisitos no funcionales}\label{requisitos-no-funcionales}
 
 \subsubsection{Usabilidad}
