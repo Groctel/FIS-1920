@@ -2,24 +2,857 @@
 
 \subsubsection{\texttt{BuscarViviendasIntercambio}}
 
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{BuscarViviendasIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro, Invitado} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small \ref{lista-viviendas}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El usuario debe de ser miembro o invitado} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El sistema devuelve una lista de viviendas disponibles para intercambio} \\
+	\hline
+	\textbf{Autor}          & {\small Fabián González Martín} & \textbf{Fecha} & {\small 12/4/20} & \textbf{Versión} & {\small 1.0.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Devolver una lista de viviendas intercambiables a quien lo consulte \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	Un miembro o invitado manda una consulta al sistema, y este le devuelve una lista de las viviendas disponibles para intercambio \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small Invitado/Miembro realiza consulta} & & {\small } \\
+	\hline
+	\textbf{2} & {\small} & \textbf{3} & {\small Se devuelve la lista de viviendas} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\textbf{1a} & \multicolumn{4}{p{14.6cm}|[2pt]}{El solicitante no es ni miembro ni invitado} \\
+	\hline
+	\textbf{1b} & \multicolumn{4}{p{14.6cm}|[2pt]}{Se rechaza la solicitud} \\
+	\hline
+	            & \multicolumn{4}{p{14.6cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Cada vez que se realice una consulta} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Baja} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Baja} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+
 \subsubsection{\texttt{SolicitarIntercambio}}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{SolicitarIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El solicitante debe ser miembro} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Se registra la solicitud de intercambio} \\
+	\hline
+	\textbf{Autor}          & {\small Fabián González Martín} & \textbf{Fecha} & {\small 12/4/20} & \textbf{Versión} & {\small 1.0.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Un miembro solicita un intercambio de viviendas \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	Un miembro solicita un intercambio de viviendas, quedando su solicitud registrada en el sistema a la espera de ser satisfecha. \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El miembro solicita el intercambio} & & {\small } \\
+	\hline
+	\textbf{2} & {\small } & \textbf{3} & {\small El sistema registra la solicitud} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\textbf{1a} & \multicolumn{4}{p{14.6cm}|[2pt]}{El solicitante no es miembro} \\
+	\hline
+	\textbf{1b} & \multicolumn{4}{p{14.6cm}|[2pt]}{Se rechaza la solicitud} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Cada vez que un miembro lo solicite} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Moderada} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Baja} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
 
 \subsubsection{\texttt{RechazarIntercambio}}
 
-\subsubsection{\texttt{AceptarIntercambio}}
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{RechazarIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Tiene que existir una solicitud de intercambio} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La solicitud de intercambio es rechazada} \\
+	\hline
+	\textbf{Autor}          & {\small Fabián González Martín} & \textbf{Fecha} & {\small 12/4/20} & \textbf{Versión} & {\small 1.0.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
 
-\subsubsection{\texttt{CanjearIntercambioPorPuntos}}
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Se rechaza una solicitud de intercambio existente \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	Si se ha recibido con anterioridad una solicitud de intercambio, esta queda rechazada \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small Un miembro solicita intercambio} & & {\small } \\
+	\hline
+	\textbf{2} & {\small El otro miembro rechaza la solicitud} & \textbf{3} & {\small Se marca la solicitud como rechazada y se informa al solicitante} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\textbf{} & \multicolumn{4}{p{14.6cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Una vez máximo por cada solicitud} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Moderada} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+
+\subsubsection{\texttt{AceptarIntercambio}}\label{aceptar-intercambio}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{AceptarIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small \ref{canjear-intercambio-por-puntos}} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Debe existir una solicitud de intercambio} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La solicitud de intercambio es aceptada} \\
+	\hline
+	\textbf{Autor}          & {\small Fabián González Martín} & \textbf{Fecha} & {\small 12/4/20} & \textbf{Versión} & {\small 1.0.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Se acepta una solicitud de intercambio existente \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	Un miembro, tras recibir una solicitud de intercambio por parte de otro miembro, acepta la solicitud \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small Un miembro solicita un intercambio} & & {\small } \\
+	\hline
+	\textbf{2} & {\small El miembro receptor de la solicitud la acepta} & \textbf{3} & {\small La solicitud se marca como aceptada} \\
+    \hline
+   \textbf{}  & {\small }& \textbf{N} & {\small \textit{Incluir (CU\_3.5\_CanjearIntercambioPorPuntos)} } \\
+
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\textbf{} & \multicolumn{4}{p{14.6cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Una vez máximo por cada solicitud} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Alta} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+
+\subsubsection{\texttt{CanjearIntercambioPorPuntos}}\label{canjear-intercambio-por-puntos}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{CanjearIntercambioPorPuntos}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small \ref{consulta-guest-points}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small \ref{aceptar-intercambio}} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Debe haberse realizado un intercambio} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El intercambio se canjea por puntos para los dos miembros} \\
+	\hline
+	\textbf{Autor}          & {\small Fabián González Martín} & \textbf{Fecha} & {\small 12/4/20} & \textbf{Versión} & {\small 1.0.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Se canjean intercambios por GuestPoints \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	Tras haber realizado un intercambio, los dos miembros reciben una cantidad de puntos \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small Miembro 1: Realiza intercambio} & & {\small } \\
+	\hline
+	\textbf{2} & {\small Miembro 2: Realiza intercambio} & \textbf{3} & {\small Se agregan puntos a las cuentas de los dos miembros} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\textbf{} & \multicolumn{4}{p{14.6cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Dos veces por intercambio, una vez por cada miembro} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Baja} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Baja} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
 
 \subsubsection{\texttt{AnularSolicitudIntercambio}}
 
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{AnularSolicitudIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Debe existir una solicitud emitida por el miembro que solicita la anulación} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La solicitud de intercambio es anulada} \\
+	\hline
+	\textbf{Autor}          & {\small Fabián González Martín} & \textbf{Fecha} & {\small 12/4/20} & \textbf{Versión} & {\small 1.0.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Anula una solicitud de intercambio \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	Un miembro que previamente haya solicitado un intercambio de viviendas, cancela dicha solicitud \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small Un miembro solicita intercambio} & & {\small } \\
+	\hline
+	\textbf{2} & {\small Ese mismo miembro cancela la solictud} & \textbf{3} & {\small Se anula la solicitud y se informa al que iba a ser el receptor de la misma} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\textbf{} & \multicolumn{4}{p{14.6cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Una vez máximo por cada solicitud emitida} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+
 \subsubsection{\texttt{AnularIntercambio}}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{AnularIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Debe de existir un intercambio} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El intercambio es anulado} \\
+	\hline
+	\textbf{Autor}          & {\small Fabián González Martín} & \textbf{Fecha} & {\small 12/4/20} & \textbf{Versión} & {\small 1.0.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Anula un intercambio \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	Un miembro, tras haber aceptado una solicitud de intercambio, anula el intercambio \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small Un miembro acepta la solicitud de intercambio} & & {\small } \\
+	\hline
+	\textbf{2} & {\small Ese mismo miembro anula el intercambio} & \textbf{3} & {\small El intercambio se anula y se informa al solicitante} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\textbf{} & \multicolumn{4}{p{14.6cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Una vez máximo por intercambio} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
 
 \subsubsection{\texttt{PuntuarIntercambio}}
 
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{PuntuarIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Debe haberse realizado un intercambio} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El miembro y la vivienda asociada reciben una puntuación} \\
+	\hline
+	\textbf{Autor}          & {\small Fabián González Martín} & \textbf{Fecha} & {\small 12/4/20} & \textbf{Versión} & {\small 1.0.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Puntuar los intercambios \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	Un miembro, tras haber intercambiado su vivienda, puntúa su estancia en la plataforma \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small Un miembro del intercambio puntúa el intercambio} & & {\small } \\
+	\hline
+	\textbf{2} & {\small El otro miembro hace lo mismo} & \textbf{3} & {\small Se otorgan puntos a cada miembro} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\textbf{} & \multicolumn{4}{p{14.6cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Una vez máximo por intercambio} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Baja} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Baja} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+
 \subsubsection{\texttt{AñadirOpiniónIntercambio}}
 
-\subsubsection{\texttt{PagoCuotaAnual}}
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{AñadirOpiniónIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Se ha debido realizar un intercambio} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Se añade una opinión a la plataforma} \\
+	\hline
+	\textbf{Autor}          & {\small Fabián González Martín} & \textbf{Fecha} & {\small 12/4/20} & \textbf{Versión} & {\small 1.0.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
 
-\subsubsection{\texttt{PagoConTarjeta}}
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Se añade una opinión sobre un intercambio \\
+	\tabucline[2pt]{-}
+\end{tabu}
 
-\subsubsection{\texttt{PagoPayPal}}
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	Tras realizar un intercambio, el miembro deja su opinión en la plataforma \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small Se realiza el intercambio} & & {\small } \\
+	\hline
+	\textbf{2} & {\small Cada uno de los miembros deja su opinión} & \textbf{3} & {\small Las opiniones quedan registradas asociadas a cada miembro y vivienda} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\textbf{} & \multicolumn{4}{p{14.6cm}|[2pt]}{} \\
+	\hline
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Dos veces por intercambio, una por cada actor} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Baja} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Baja} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+
+\subsubsection{\texttt{PagoCuotaAnual}}\label{pago-cuota-anual}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{PagoCuotaAnual}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small \ref{consulta-datos-inquilino}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small \ref{pago-paypal} \ref{pago-tarjeta}} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Se debe haber llegado a un acuerdo y concretado un intercambio} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Se procede al pago de la cuota anual} \\
+	\hline
+	\textbf{Autor}          & {\small Fabián González Martín} & \textbf{Fecha} & {\small 12/4/20} & \textbf{Versión} & {\small 1.0.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Permite el pago de la cuota anual \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	Este caso de uso permite realizar el pago de cuota anual, que sólo se hace cuando se llega a un acuerdo y se concreta un intercambio \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small Dos miembros realizan un intercambio} & & {\small } \\
+	\hline
+	\textbf{2} & {\small El miembro paga la cuota anual} & \textbf{3} & {\small Se cobra por uno de los dos medios disponibles y se marca como pagado} \\
+	\hline
+	\textbf{}  & {\small } & \textbf{} & {\small }\\
+	\hline
+   \textbf{}  & {\small }& \textbf{N} & {\small \textit{Incluir(CU\_3.11\_PagoConTarjeta), (CU\_3.12\_PagoPaypal)}} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\textbf{1a} & \multicolumn{4}{p{14.6cm}|[2pt]}{No ha habido acuerdo, intercambio o no se puede efectuar el cobro} \\
+	\hline
+	\textbf{1b} & \multicolumn{4}{p{14.6cm}|[2pt]}{Se anula el proceso, se marca la cuota como impagada} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Una vez al año} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Alta) ---} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+
+\subsubsection{\texttt{PagoConTarjeta}}\label{pago-tarjeta}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{PagoConTarjeta}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small SistemaAutorizaciónPagos} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Secundario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small \ref{consulta-datos-inquilino}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small \ref{pago-cuota-anual}} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Debe estar seleccionada una tarjeta válida} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Se procede al cobro con tarjeta} \\
+	\hline
+	\textbf{Autor}          & {\small Fabián González Martín} & \textbf{Fecha} & {\small 12/4/20} & \textbf{Versión} & {\small 1.0.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Permite el pago con tarjeta \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	Utiliza una tarjeta válida como método de pago \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El sistema verifica que la tarjeta sea válida y tenga fondos suficientes} & & {\small } \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\textbf{1a} & \multicolumn{4}{p{14.6cm}|[2pt]}{La tarjeta no es válida o no posee fondos suficientes} \\
+	\hline
+	\textbf{1b} & \multicolumn{4}{p{14.6cm}|[2pt]}{Se cancela la operación} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Cada vez que se solicite} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
+
+
+\subsubsection{\texttt{PagoPayPal}} \label{pago-paypal}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{PagoPayPal}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small SistemaAutorizaciónPagos} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Secundario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small \ref{consulta-datos-inquilino}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small \ref{pago-cuota-anual}} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Debe usarse una cuenta de PayPal válida} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Se retiran los fondos de PayPal y se procede al cobro} \\
+	\hline
+	\textbf{Autor}          & {\small Fabián González Martín} & \textbf{Fecha} & {\small 12/4/20} & \textbf{Versión} & {\small 1.0.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Permite cobrar vía PayPal \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	Si se usa una cuenta de PayPal válida, se procede al cobro de la cantidad solicitada, de haber fondos \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small Se establece el pago por PayPal} & & {\small } \\
+	\hline
+	\textbf{2} & {\small } & \textbf{3} & {\small Se retiran los fondos y se procede al pago} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\textbf{1a} & \multicolumn{4}{p{14.6cm}|[2pt]}{No hay fondo suficientes o no es una cuenta válida} \\
+	\hline
+	\textbf{1b} & \multicolumn{4}{p{14.6cm}|[2pt]}{Se cancela la operación y se informa al usuario} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Cada vez que e solicite} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Alta} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\end{center}
