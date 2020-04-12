@@ -1,6 +1,6 @@
 \subsection{\texttt{GestiónViviendasIntercambio}}
 
-\subsubsection{\texttt{AltaViviendaIntercambio}}\label{alta-vivienda-intercambio}
+\subsubsection{\texttt{AltaViviendaIntercambio}}\label{cu-alta-vivienda-intercambio}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -11,7 +11,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small\ref{adicion-viviendas},~\ref{modificacion-anuncio}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{asignar-guest-points}} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small\ref{adicion-viviendas}, \ref{modificacion-anuncio}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{cu-asignar-guest-points}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La vivienda debe estar registrada sin alquilar o no estar registrada.} \\
 	\hline
@@ -74,7 +74,7 @@
 
 \end{center}
 
-\subsubsection{\texttt{AsignarGuestPoints}}\label{asignar-guest-points}
+\subsubsection{\texttt{AsignarGuestPoints}}\label{cu-asignar-guest-points}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -85,7 +85,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{\ref{cu-alta-vivienda-intercambio}, \ref{cu-modificar-vivienda-intercambio}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{} \\
 	\hline
@@ -141,7 +141,7 @@
 
 \end{center}
 
-\subsubsection{\texttt{BajaViviendaIntercambio}}\label{baja-vivienda-intercambio}
+\subsubsection{\texttt{BajaViviendaIntercambio}}\label{cu-baja-vivienda-intercambio}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -152,7 +152,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La vivienda a dar de baja debe estar registrada en el programa de intercambio.} \\
 	\hline
@@ -209,7 +209,7 @@
 
 \end{center}
 
-\subsubsection{\texttt{ModificarViviendaIntercambio}}\label{modificar-vivienda-intercambio}
+\subsubsection{\texttt{ModificarViviendaIntercambio}}\label{cu-modificar-vivienda-intercambio}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -220,7 +220,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{\ref{cu-asignar-guest-points}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La vivienda debe estar registrada en el programa de intercambio.} \\
 	\hline
@@ -277,7 +277,7 @@
 
 \end{center}
 
-\subsubsection{\texttt{ValidarViviendasIntercambio}}\label{validar-viviendas-intercambio}
+\subsubsection{\texttt{ValidarViviendasIntercambio}}\label{cu-validar-viviendas-intercambio}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -288,7 +288,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La vivienda debe estar pendiente de validación en el programa de intercambio.} \\
 	\hline

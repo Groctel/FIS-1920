@@ -1,6 +1,6 @@
 \subsection{\texttt{GestiónAlquileres}}
 
-\subsubsection{\texttt{AltaAveria}}
+\subsubsection{\texttt{AltaAveria}}\label{cu-alta-avería}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -11,7 +11,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small} & \multicolumn{3}{p{4.5cm}|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small La vivienda sobre la que se reporta la avería debe estar alquilada.} \\
 	\hline
@@ -63,13 +63,11 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
-\subsubsection{\texttt{AltaInquilito}}
+\subsubsection{\texttt{AltaInquilito}}\label{cu-alta-inquilino}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -80,7 +78,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{contrato-alquiler}} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{cu-contrato-alquiler}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small} \\
 	\hline
@@ -128,13 +126,11 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
-\subsubsection{\texttt{AñadirPagoCuentaCliente}}
+\subsubsection{\texttt{AñadirPagoCuentaCliente}}\label{cu-añadir-pago-cuenta-cliente}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -145,7 +141,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{cu-añadir-pago-cuenta-cliente}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Se debe haber realizado un pago y éste no debe estar registrado.} \\
 	\hline
@@ -193,13 +189,11 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
-\subsubsection{\texttt{BajaContratoAlquiler}}
+\subsubsection{\texttt{BajaContratoAlquiler}}\label{cu-baja-contrato-alquiler}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -210,7 +204,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{cu-baja-inquilino}, \ref{cu-devolver-fianza-inquilino}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Debe haber un contrato de alquiler activo.} \\
 	\hline
@@ -258,13 +252,11 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
-\subsubsection{\texttt{BajaInquilino}}
+\subsubsection{\texttt{BajaInquilino}}\label{cu-baja-inquilino}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -275,7 +267,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{cu-baja-contrato-alquiler}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El usuario debe estar dado de alta como inquilino en al menos una vivienda.} \\
 	\hline
@@ -323,13 +315,11 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
-\subsubsection{\texttt{ConsultarContratosAlquiler}}
+\subsubsection{\texttt{ConsultarContratosAlquiler}}\label{cu-consultar-contratos-alquiler}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -340,7 +330,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{} \\
 	\hline
@@ -386,13 +376,11 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
-\subsubsection{\texttt{ContratoAlquiler}}
+\subsubsection{\texttt{ContratoAlquiler}}\label{cu-contrato-alquiler}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -403,7 +391,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{cu-alta-inquilino}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{} \\
 	\hline
@@ -453,13 +441,11 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
-\subsubsection{\texttt{DevolverFianzaInquilino}}
+\subsubsection{\texttt{DevolverFianzaInquilino}}\label{cu-devolver-fianza-inquilino}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -470,7 +456,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{cu-devolver-fianza-inquilino}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El inquilino debe estar dándose de baja de un contrato.} \\
 	\hline
@@ -516,13 +502,11 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
-\subsubsection{\texttt{EnviarRecibosBanco}}
+\subsubsection{\texttt{EnviarRecibosBanco}}\label{cu-enviar-recibos-banco}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -533,7 +517,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{cu-generar-recibos-alquiler}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El recibo debe no haberse enviado aún al banco.} \\
 	\hline
@@ -581,13 +565,11 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
-\subsubsection{\texttt{GenerarRecibosAlquiler}}
+\subsubsection{\texttt{GenerarRecibosAlquiler}}\label{cu-generar-recibos-alquiler}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -598,7 +580,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{cu-enviar-recibos-banco}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{} \\
 	\hline
@@ -646,13 +628,11 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
-\subsubsection{\texttt{IniciarTrámiteMorosos}}
+\subsubsection{\texttt{IniciarTrámiteMorosos}}\label{cu-iniciar-trámite-morosos}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -663,7 +643,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El contrato sobre el que se aplique debe figurar como impagado.} \\
 	\hline
@@ -711,13 +691,11 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
-\subsubsection{\texttt{ObtenerRecibosCobrados}}
+\subsubsection{\texttt{ObtenerRecibosCobrados}}\label{cu-obtener-recibos-cobrados}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -728,7 +706,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El recibo debe no haber sido recibido anteriormente por el banco.} \\
 	\hline
@@ -778,13 +756,11 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
-\subsubsection{\texttt{ObtenerRecibosDevueltos}}
+\subsubsection{\texttt{ObtenerRecibosDevueltos}}\label{cu-obtener-recibos-devueltos}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -795,7 +771,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El recibo debe no haber sido devuelto con anterioridad.} \\
 	\hline
@@ -845,13 +821,11 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
-\subsubsection{\texttt{PagarRecibosMetálico}}
+\subsubsection{\texttt{PagarRecibosMetálico}}\label{cu-pagar-recibos-metálico}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -862,7 +836,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small--- Indicamos qué requisitos se pueden incluir dentro de este CU ---} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small--- CU que tienen relación con éste ---} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{cu-pagar-recibos-metálico}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El recibo debe no estar pagado.} \\
 	\hline
@@ -911,8 +885,6 @@
 	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
-	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
 	\tabucline[2pt]{-}
 \end{tabu}
 
