@@ -1,9 +1,9 @@
-\section{Descripción de los actores}\label{descripcion-de-los-actores}
+\section{Descripción de los actores}\label{act-descripcion-de-los-actores}
 
 \renewcommand{\thesubsection}
-				 {ACT-0\arabic{subsection}}
+             {ACT-\arabic{subsection}}
 
-\subsection{Administrativo}\label{administrativo}
+\subsection{Administrativo}\label{act-administrativo}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -18,7 +18,7 @@
 	                                     & \multicolumn{5}{l|[2pt]}{Administrativo --- Cliente} \\
 	                                     & \multicolumn{5}{l|[2pt]}{Administrativo --- Inquilino} \\
 	\hline
-	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
+	\textbf{Referencias}     & \multicolumn{5}{p{12cm}|[2pt]}{\ref{cu-alta-avería}, \ref{cu-añadir-pago-cuenta-cliente}, \ref{cu-baja-contrato-alquiler}, \ref{cu-baja-inquilino}, \ref{cu-consultar-contratos-alquiler}, \ref{cu-contrato-alquiler}, \ref{cu-devolver-fianza-inquilino}, \ref{cu-iniciar-trámite-morosos}, \ref{cu-obtener-recibos-cobrados}, \ref{cu-obtener-recibos-devueltos}, \ref{cu-pagar-recibos-metálico}, \ref{cu-alta-cliente}, \ref{cu-baja-cliente}, \ref{cu-cobrar-alquiler-mes}, \ref{cu-consultar-clientes}, \ref{cu-consultar-viviendas-alquiladas-cliente}, \ref{cu-modificar-datos-cliente}, \ref{cu-consulta-intercambios}, \ref{cu-validar-miembro}, \ref{cu-alta-oferta-alquiler-vivienda}, \ref{cu-alta-publicidad}, \ref{cu-alta-vivienda-alquiler}, \ref{baja-oferta-alquiler-vivienda}, \ref{cu-baja-publicidad}, \ref{cu-baja-vivienda-alquiler}, \ref{cu-consultar-ofertas-alquiler}, \ref{cu-consultar-viviendas-alquiler} \ref{cu-modificar-datos-vvienda-alquiler}, \ref{cu-modificar-oferta-alquiler-vivienda}, \ref{modificar-publicidad}, \ref{cu-validar-viviendas-intercambio}, \ref{cu-iniciar-sesión}} \\
 	\hline
 	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 12/04/20 & \textbf{Versión} & 1.0 \\
 	\tabucline[2pt]{-}
@@ -47,7 +47,7 @@
 \end{tabu}
 \end{center}
 
-\subsection{Banco}\label{banco}
+\subsection{Banco}\label{act-banco}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -61,7 +61,7 @@
 	\hline
 	\textbf{Relaciones}      & \multicolumn{5}{l|[2pt]}{Banco --- Administrativo} \\
 	\hline
-	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
+	\textbf{Referencias}     & \multicolumn{5}{p{12cm}|[2pt]}{\ref{cu-enviar-recibos-banco}, \ref{cu-obtener-recibos-cobrados}, \ref{cu-obtener-recibos-devueltos}} \\
 	\hline
 	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 12/04/20 & \textbf{Versión} & 1.0 \\
 	\tabucline[2pt]{-}
@@ -88,22 +88,21 @@
 \end{tabu}
 \end{center}
 
-\subsection{Inquilino}\label{inquilino}
+\subsection{Cliente}\label{act-cliente}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Inquilino}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsection}} \\
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Cliente}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsection}} \\
 	\hline
-	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Persona que alquila una propiedad de cualquier tipo} \\
+	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Cliente de la afencia inmobiliaria} \\
 	\hline
-	\multirow{2}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Busca propiedades para alquilar} \\
+	\multirow{2}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Busca viviendas para alquilar o vive en una} \\
 	                                          & \multicolumn{5}{l|[2pt]}{Tiene un administrativo asignado} \\
 	\hline
-	\multirow{2}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Inquilino --- Miembro} \\
-	                                     & \multicolumn{5}{l|[2pt]}{Inquilino --- Administrativo} \\
+	\textbf{Relaciones}      & \multicolumn{5}{l|[2pt]}{Cliente --- Administrativo} \\
 	\hline
-	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
+	\textbf{Referencias}     & \multicolumn{5}{p{12cm}|[2pt]}{\ref{cu-alta-cliente}, \ref{cu-baja-cliente}, \ref{cu-cobrar-alquiler-mes}, \ref{cu-consultar-viviendas-alquiladas-cliente}, \ref{cu-cobrar-alquiler-mes}, \ref{cu-modificar-datos-cliente}} \\
 	\hline
 	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 12/04/20 & \textbf{Versión} & 1.0 \\
 	\tabucline[2pt]{-}
@@ -132,7 +131,51 @@
 \end{tabu}
 \end{center}
 
-\subsection{Invitado}\label{invitado}
+\subsection{Inquilino}\label{act-inquilino}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Inquilino}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsection}} \\
+	\hline
+	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Persona que alquila una propiedad de cualquier tipo} \\
+	\hline
+	\multirow{2}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Está viviendo en una vivienda} \\
+	                                          & \multicolumn{5}{l|[2pt]}{Tiene un administrativo asignado} \\
+	\hline
+	\multirow{2}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Inquilino --- Miembro} \\
+	                                     & \multicolumn{5}{l|[2pt]}{Inquilino --- Administrativo} \\
+	\hline
+	\textbf{Referencias}     & \multicolumn{5}{p{12cm}|[2pt]}{\ref{cu-alta-avería}, \ref{cu-alta-inquilino}, \ref{cu-baja-contrato-alquiler}, \ref{cu-baja-inquilino}, \ref{cu-contrato-alquiler}, \ref{cu-devolver-fianza-inquilino}, \ref{cu-pagar-recibos-metálico}} \\
+	\hline
+	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 12/04/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{3cm}|p{8.81cm}|p{3cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{3}{|[2pt]l|[2pt]}{\textbf{Atributos}} \\
+	\hline
+	\textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo} \\
+	\hline
+	Datos personales & Nombre, Apellido, DNI, correo, teléfono & Lista de cadenas de caracteres \\
+	\hline
+	Ubicación & Áreas en las que se ubican sus propiedades & Lista de áreas de coordenadas \\
+	\hline
+	Valoración & Media de las valoraciones recibidas por los arrendadores & Decimal [0-5] \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Comentarios} \\
+	\hline
+	\\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsection{Invitado}\label{act-invitado}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -145,7 +188,7 @@
 	\hline
 	\textbf{Relaciones}      & \multicolumn{5}{l|[2pt]}{} \\
 	\hline
-	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
+	\textbf{Referencias}     & \multicolumn{5}{p{12cm}|[2pt]}{\ref{cu-buscar-viviendas-intercambio}} \\
 	\hline
 	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 12/04/20 & \textbf{Versión} & 1.0 \\
 	\tabucline[2pt]{-}
@@ -170,7 +213,7 @@
 \end{tabu}
 \end{center}
 
-\subsection{Miembro}\label{miembro}
+\subsection{Miembro}\label{act-miembro}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -184,9 +227,9 @@
 	                                          & \multicolumn{5}{l|[2pt]}{Tiene un administrativo asignado} \\
 	\hline
 	\multirow{2}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Miembro --- Inquilino} \\
-	                                    & \multicolumn{5}{l|[2pt]}{Miembro --- Administrativo} \\
+	                                     & \multicolumn{5}{l|[2pt]}{Miembro --- Administrativo} \\
 	\hline
-	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
+	\textbf{Referencias}     & \multicolumn{5}{p{12cm}|[2pt]}{\ref{cu-aceptar-intercambio}, \ref{cu-anular-intercambio}, \ref{cu-anular-solicitud-intercambio}, \ref{cu-buscar-viviendas-intercambio}, \ref{cu-canjear-intercambio-por-puntos}, \ref{cu-pago-cuota-anual}, \ref{cu-puntuar-intercambio}, \ref{cu-rechazar-intercambio}, \ref{cu-solicitar-intercambio}, \ref{cu-alta-vivienda}, \ref{cu-asignar-guest-points}, \ref{cu-asignar-guest-points-miembro}, \ref{cu-baja-miembro} \ref{cu-completar-perfil}, \ref{cu-listar-intercambios-realizados}, \ref{cu-modificar-miembro}, \ref{cu-registrarse}, \ref{cu-alta-vivienda-intercambio}, \ref{cu-asignar-guest-points}, \ref{cu-baja-vivienda-intercambio}, \ref{cu-modificar-vivienda-intercambio}, \ref{cu-iniciar-sesión}} \\
 	\hline
 	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 12/04/20 & \textbf{Versión} & 1.0 \\
 	\tabucline[2pt]{-}
@@ -219,7 +262,7 @@
 \end{tabu}
 \end{center}
 
-\subsection{\texttt{SistemaAutomatizaciónPagos}}\label{sistema-automatizacion-pagos}
+\subsection{\texttt{SistemaAutomatizaciónPagos}}\label{act-sistema-automatizacion-pagos}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -232,7 +275,7 @@
 	\hline
 	\textbf{Relaciones}      & \multicolumn{5}{l|[2pt]}{\code{SistemaAutomatizaciónPagos} --- Miembro} \\
 	\hline
-	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
+	\textbf{Referencias}     & \multicolumn{5}{p{12cm}|[2pt]}{\ref{cu-pago-con-tarjeta}, \ref{pago-cuota-anual}, \ref{pago-paypal}} \\
 	\hline
 	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 12/04/20 & \textbf{Versión} & 1.0 \\
 	\tabucline[2pt]{-}
@@ -255,7 +298,7 @@
 \end{tabu}
 \end{center}
 
-\subsection{\texttt{Temporizador}}\label{temporizador}
+\subsection{\texttt{Temporizador}}\label{act-temporizador}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -268,7 +311,7 @@
 	\hline
 	\textbf{Relaciones}      & \multicolumn{5}{l|[2pt]}{} \\
 	\hline
-	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
+	\textbf{Referencias}     & \multicolumn{5}{p{12cm}|[2pt]}{\ref{cu-generar-recibos-alquiler}, \ref{enviar-recibos-banco}} \\
 	\hline
 	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 12/04/20 & \textbf{Versión} & 1.0 \\
 	\tabucline[2pt]{-}

@@ -26,7 +26,9 @@
 
 \aqchap{Práctica }
 \aqssec{}
-
+\aqsssec{}
+\titleformat{\subsubsection}[block]{\normalfont\bfseries\large}{}{0pt}{}[]
+\setcounter{secnumdepth}{3}
 
 % Document composition
 
@@ -52,21 +54,14 @@
 
 \input{input/Practica2/DiagramaCasosDeUso.tex}
 \input{input/Practica2/Actores.tex}
+
 \section{Casos de uso}
+\renewcommand{\thesubsubsection}
+             {CU\_\arabic{subsection}.\arabic{subsubsection}}
 \input{input/Practica2/CUGestionAlquileres.tex}
 \input{input/Practica2/CUGestionMiembrosIntercambio.tex}
 \input{input/Practica2/CUGestionViviendasAlquiler.tex}
 \input{input/Practica2/CUGestionViviendasIntercambio.tex}
 \input{input/Practica2/DiagramaPaquetes.tex}
-
-\aqapp{Apéndice }
-
-\chapter{Casos de uso individuales}
-\input{input/Practica2/CasosDeUsoFabian.tex}
-\input{input/Practica2/CasosDeUsoClara.tex}
-\input{input/Practica2/CasosDeUsoAtanasio.tex}
-
-\chapter{Plantillas}
-\input{plantillas/CasoDeUso.tex}
 
 \end{document}

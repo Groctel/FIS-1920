@@ -1,6 +1,6 @@
 \subsection{\texttt{GestiónMiembrosIntercambio}}
 
-\subsubsection{\texttt{AltaVivienda}}\label{alta-vivienda}
+\subsubsection{\texttt{AltaVivienda}}\label{cu-alta-vivienda}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -11,7 +11,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small\ref{adicion-viviendas},~\ref{modificacion-anuncio}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{asignar-GP}~\ref{registrarse}} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small\ref{adicion-viviendas},~\ref{modificacion-anuncio}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{cu-asignar-guest-points}, \ref{cu-registrarse}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El miembro debe estar registrado.} \\
 	\hline
@@ -64,25 +64,23 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
 
-\subsubsection{\texttt{AsignarGP}}\label{Asignar-GP}
+\subsubsection{\texttt{AsignarGuestPoints}}\label{cu-Asignar-guest-points}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{AsignarGP}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{AsignarGuestPoints}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
 	\tabucline[2pt]{-}
 	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small\ref{modificacion-anuncio}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{alta-oferta-alquiler-vivienda}} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small\ref{modificacion-anuncio}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{cu-alta-oferta-alquiler-vivienda}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Debe existir la vivienda de intercambio.} \\
 	\hline
@@ -133,29 +131,27 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
 
-\subsubsection{\texttt{AsignarGPMiembro}}\label{asignar-GP-miembro}
+\subsubsection{\texttt{AsignarGuestPointsMiembro}}\label{cu-asignar-guest-points-miembro}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{AsignarGPMiembro}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\code{AsignarGuestPointsMiembro}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
 	\tabucline[2pt]{-}
 	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small\ref{lista-arrendadores}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{completar-perfil}} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small\ref{lista-arrendadores}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{cu-completar-perfil}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El cliente debe estar registrado y tener un perfil en la plataforma.} \\
 	\hline
-	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El miembro recibe la cantidad de GP predeterminada.} \\
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El miembro recibe la cantidad de GuestPoints predeterminada.} \\
 	\hline
 	\textbf{Autor}          & {\small Clara M Romero} & \textbf{Fecha} & {\small 11/4/20} & \textbf{Versión} & {\small 1.0} \\
 	\tabucline[2pt]{-}
@@ -165,7 +161,7 @@
 	\tabucline[2pt]{-}
 	\textbf{Propósito} \\
 	\tabucline[2pt]{-}
-	Otorgar al miembro unos GP para que pueda empezar a utilizar el sistema de intercambio. \\
+	Otorgar al miembro unos GuestPoints para que pueda empezar a utilizar el sistema de intercambio. \\
 	\tabucline[2pt]{-}
 \end{tabu}
 
@@ -173,7 +169,7 @@
 	\tabucline[2pt]{-}
 	\textbf{Resumen} \\
 	\tabucline[2pt]{-}
-	El cliente recibe unos GP iniciales predeterminados.\\
+	El cliente recibe unos GuestPoints iniciales predeterminados.\\
 	\tabucline[2pt]{-}
 \end{tabu}
 
@@ -204,13 +200,11 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
-\subsubsection{\texttt{BajaMiembro}}\label{baja-miembro}
+\subsubsection{\texttt{BajaMiembro}}\label{cu-baja-miembro}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -274,13 +268,11 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
-\subsubsection{\texttt{CompletarPerfil}}\label{completar-perfil}
+\subsubsection{\texttt{CompletarPerfil}}\label{cu-completar-perfil}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -291,7 +283,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small\ref{lista-arrendadores}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{registrarse},~\ref{registrarse}} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small\ref{lista-arrendadores}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{cu-registrarse},~\ref{cu-registrarse}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El miembro debe haberse registrado.} \\
 	\hline
@@ -344,14 +336,12 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
 
-\subsubsection{\texttt{ConsultaIntercambios}}\label{consulta-intercambios}
+\subsubsection{\texttt{ConsultaIntercambios}}\label{cu-consulta-intercambios}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -415,13 +405,11 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
-\subsubsection{\texttt{ListaIntercambiosRealizados}}\label{lista-intercambios-realizados}
+\subsubsection{\texttt{ListaIntercambiosRealizados}}\label{cu-lista-intercambios-realizados}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -485,14 +473,12 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
 
-\subsubsection{\texttt{ModificarMiembro}}\label{modificar-miembro}
+\subsubsection{\texttt{ModificarMiembro}}\label{cu-modificar-miembro}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -556,14 +542,12 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
 
-\subsubsection{\texttt{Registrarse}}\label{registrarse}
+\subsubsection{\texttt{Registrarse}}\label{cu-registrarse}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -574,7 +558,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small\ref{consulta-datos-cliente}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{completar-perfil},~\ref{alta-vivienda}} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small\ref{consulta-datos-cliente}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{cu-completar-perfil},~\ref{cu-alta-vivienda}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El usuario debe estar registrado en la plataforma.} \\
 	\hline
@@ -627,13 +611,11 @@
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
 	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
-	\tabucline[2pt]{-}
 \end{tabu}
 
 \end{center}
 
-\subsubsection{\texttt{ValidarMiembro}}\label{validar-miembro}
+\subsubsection{\texttt{ValidarMiembro}}\label{cu-validar-miembro}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -644,7 +626,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{registrarse}} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small\ref{cu-registrarse}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El administrativo recibe una solicitud de registro.} \\
 	\hline
@@ -701,8 +683,6 @@
 	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
 	\tabucline[2pt]{-}
 	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
-	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{REVISAR ANTES DE ENVIAR}} \\
 	\tabucline[2pt]{-}
 \end{tabu}
 
