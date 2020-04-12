@@ -32,6 +32,7 @@
 		\item Necesitamos una lista de los arrendadores con su información de contacto, DNI e IBAN de la cuenta bancaria en la que ingresar los alquileres, además de si pertenecen o no al sistema de intercambios.\label{lista-arrendadores}
 		\begin{enumerate}[label=\textbf{RF1.2.\arabic*}]
 			\item Cada uno tendrá además una lista de deseos de viviendas en el programa de intercambio, en caso de pertenecer a éste.\label{lista-deseos-arrendadores}
+			\item Se podrá consultar la lista de intercambios realizados en el programa de intercambio, en caso de pertenecer a éste.\label{lista-intercambios-arrendadores}
 		\end{enumerate}
 		\item Alta. Se registra un nuevo arrendador, con sus datos correspondientes.\label{alta-arrendadores}
 		\item Baja. Se da de baja un arrendador, se borran todos sus datos excepto los datos de contacto e IBAN\@.\label{baja-arrendadores}
@@ -46,6 +47,7 @@
 			\item Necesitamos una lista de viviendas. Cada inmueble alquilado tendrá además un arrendatario asignado de la lista de clientes de la agencia.\label{lista-viviendas}
 			\item Añadir viviendas a la lista.\label{adicion-viviendas}
 			\item Retirar viviendas de la lista.\label{retirada-viviendas}
+			\item Modificar viviendas de la lista.\label{modificar-viviendas}
 		\end{enumerate}
 	\item Ver el estado en el que se encuentra cada propiedad (Intercambiada, Alquilada, Disponible, Alquilada con impago (número de meses impagados)).\label{estado-propiedad}
 		\begin{enumerate}[label=\textbf{RF-2.2.\arabic*}]
@@ -63,6 +65,7 @@
 			\item Dar de alta a un nuevo cliente.\label{alta-cliente}
 			\item Dar de baja a un nuevo cliente\label{baja-cliente}
 			\item Consultar datos del cliente, disponibles en la lista.\label{consulta-datos-cliente}
+			\item Modificar datos del cliente, disponibles en la lista.\label{modificar-datos-cliente}
 		\end{enumerate}
 	\end{enumerate}
 	\item\textbf{Gestión de Agentes Inmobiliarios:} El sistema debe gestionar los agentes que trabajan para la empresa, vacantes y CVs de candidatos.\label{gestion-agentes-inmobiliarios}
@@ -84,6 +87,7 @@
 			\end{enumerate}
 		\item El sistema publicitará a los clientes viviendas relacionadas con los inmuebles de su lista de deseos.\label{publicidad-viviendas-relacionadas}
 		\item Si el cliente es nuevo o no se poseen datos porque el cliente así lo ha requerido, se publicitarán inmuebles acordes a el tipo de vivienda más popular en ese momento.\label{publicidad-cliente-nuevo}
+		\item Una vez el arrendador tiene una oferta de alquiler de vivienda dada de alta, el anuncio en la plataforma se generará automáticamente.\label{generar-anuncio}
 		\end{enumerate}
 \end{enumerate}
 
