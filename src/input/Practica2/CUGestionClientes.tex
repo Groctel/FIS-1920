@@ -1,6 +1,6 @@
 \subsection{\texttt{GestiónClientes}}
 
-\subsubsection{\texttt{AltaCliente}}\label{cu-altacliente}
+\subsubsection{\texttt{AltaCliente}}\label{cu-alta-cliente}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -11,7 +11,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small \ref{alta-cliente}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small } \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small \ref{cu-alta-cliente}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small } \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El cliente no debe estar dado de alta en el sistema} \\
 	\hline
@@ -72,7 +72,7 @@
 \end{center}
 
 
-\subsubsection{\texttt{BajaCliente}}
+\subsubsection{\texttt{BajaCliente}}\label{cu-baja-cliente}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -83,7 +83,7 @@
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small \ref{baja-cliente}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small \ref{cu-baja-cliente}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Estar dado de alta en el sistema} \\
 	\hline
@@ -144,80 +144,7 @@
 
 \end{center}
 
-
-\subsubsection{\texttt{ModificarDatosCliente}}
-
-\begin{center}
-\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
-	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{ModificarDatosCliente}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
-	\tabucline[2pt]{-}
-	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Administrativo, Cliente} \\
-	\hline
-	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
-	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small \ref{modificar-datos-cliente}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small} \\
-	\hline
-	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Existir en el sistema, tener datos que modificar} \\
-	\hline
-	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El administrativo cambia los datos del cliente por unos nuevos, no necesariamente todos} \\
-	\hline
-	\textbf{Autor}          & {\small Fabián González Martín} & \textbf{Fecha} & {\small 12/04/2020} & \textbf{Versión} & {\small 1.0.0} \\
-	\tabucline[2pt]{-}
-\end{tabu}
-
-\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
-	\tabucline[2pt]{-}
-	\textbf{Propósito} \\
-	\tabucline[2pt]{-}
-	Modificar los datos de un cliente existente en el sistema \\
-	\tabucline[2pt]{-}
-\end{tabu}
-
-\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
-	\tabucline[2pt]{-}
-	\textbf{Resumen} \\
-	\tabucline[2pt]{-}
-	El administrativo modifica los datos de un cliente, bien por necesidad o por solicitud del cliente \\
-	\tabucline[2pt]{-}
-\end{tabu}
-
-\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
-	\tabucline[2pt]{-}
-	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
-	\tabucline[2pt]{-}
-	\textbf{1} & {\small El cliente solicita un cambio en sus datos} & & {\small } \\
-	\hline
-	\textbf{2} & {\small El administrativo verifica la corrección de los datos nuevos, y los modifica} & \textbf{3} & {\small Se eliminan los datos anteriores y se establecen los nuevos} \\
-	\tabucline[2pt]{-}
-\end{tabu}
-
-\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
-	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
-	\tabucline[2pt]{-}
-	\textbf{1a} & \multicolumn{4}{p{14.6cm}|[2pt]}{Los nuevos datos no son correctos o no se ajustan al formato requerido} \\
-	\hline
-	\textbf{1b} & \multicolumn{4}{p{14.6cm}|[2pt]}{Se rechaza la solicitud, se mantienen los datos actuales} \\
-	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
-	\tabucline[2pt]{-}
-	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Todas las veces que un cliente lo solicite} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
-	\hline
-	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
-	\hline
-	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
-	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
-	\tabucline[2pt]{-}
-	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{} \\
-	\tabucline[2pt]{-}
-\end{tabu}
-
-\end{center}
-
-
-\subsubsection{\texttt{ConsultarViviendasAlquiladasCliente}}
+\subsubsection{\texttt{ConsultarViviendasAlquiladasCliente}}\label{cu-consultar-viviendas-alquiladas-cliente}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -288,7 +215,7 @@
 \end{center}
 
 
-\subsubsection{\texttt{CobrarAlquileresMes}}
+\subsubsection{\texttt{CobrarAlquileresMes}}\label{cu-cobrar-alquileres-mes}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -360,7 +287,7 @@
 \end{center}
 
 
-\subsubsection{\texttt{ConsultarClientes}}
+\subsubsection{\texttt{ConsultarClientes}}\label{cu-consultar-clientes}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
@@ -430,4 +357,74 @@
 	\tabucline[2pt]{-}
 \end{tabu}
 
+\end{center}
+
+\subsubsection{\texttt{ModificarDatosCliente}}\label{cu-modificar-datos-cliente}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{ModificarDatosCliente}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\tabucline[2pt]{-}
+	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Administrativo, Cliente} \\
+	\hline
+	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
+	\hline
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small \ref{cu-modificar-datos-cliente}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small} \\
+	\hline
+	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Existir en el sistema, tener datos que modificar} \\
+	\hline
+	\textbf{Postcondición}  & \multicolumn{5}{p{12.2cm}|[2pt]}{\small El administrativo cambia los datos del cliente por unos nuevos, no necesariamente todos} \\
+	\hline
+	\textbf{Autor}          & {\small Fabián González Martín} & \textbf{Fecha} & {\small 12/04/2020} & \textbf{Versión} & {\small 1.0.0} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Propósito} \\
+	\tabucline[2pt]{-}
+	Modificar los datos de un cliente existente en el sistema \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Resumen} \\
+	\tabucline[2pt]{-}
+	El administrativo modifica los datos de un cliente, bien por necesidad o por solicitud del cliente \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{6.69cm}|C{0.5cm}|p{6.69cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{4}{|[2pt]p{14.38cm}|[2pt]}{\textbf{Curso normal (Básico)}} \\
+	\tabucline[2pt]{-}
+	\textbf{1} & {\small El cliente solicita un cambio en sus datos} & & {\small } \\
+	\hline
+	\textbf{2} & {\small El administrativo verifica la corrección de los datos nuevos, y los modifica} & \textbf{3} & {\small Se eliminan los datos anteriores y se establecen los nuevos} \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]C{0.5cm}|p{3.42cm}|p{3.92cm}|p{3.92cm}|p{3.92cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Cursos alternos}} \\
+	\tabucline[2pt]{-}
+	\textbf{1a} & \multicolumn{4}{p{14.6cm}|[2pt]}{Los nuevos datos no son correctos o no se ajustan al formato requerido} \\
+	\hline
+	\textbf{1b} & \multicolumn{4}{p{14.6cm}|[2pt]}{Se rechaza la solicitud, se mantienen los datos actuales} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{\textbf{Otros datos}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Todas las veces que un cliente lo solicite} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Vital} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\hline
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.58cm}|[2pt]}{\textbf{Comentarios}} \\
+	\tabucline[2pt]{-}
+	\multicolumn{5}{|[2pt]p{15.68cm}|[2pt]}{} \\
+	\tabucline[2pt]{-}
+\end{tabu}
 \end{center}
