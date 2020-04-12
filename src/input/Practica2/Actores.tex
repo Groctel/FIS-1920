@@ -3,25 +3,24 @@
 \renewcommand{\thesubsection}
 				 {ACT-0\arabic{subsection}}
 
-\subsection{Agente inmobiliario}
+\subsection{Administrativo}\label{administrativo}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Agente inmobiliario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-01}\label{actor-agente-inmobiliario}} \\
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Administrativo}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsection}} \\
 	\hline
 	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Persona contratada por la agencia inmobiliaria} \\
 	\hline
-	\multirow{2}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Gestiona la relacion entre arrendador y arrendatario} \\
-	                                          & \multicolumn{5}{l|[2pt]}{Revisa la corrección de los anuncios de propiedades} \\
+	\textbf{Características} & \multicolumn{5}{l|[2pt]}{Gestiona las acciones de los clientes, inquilinos y miembros} \\
 	\hline
-	\multirow{3}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Agente inmobiliario --- Arrendador} \\
-	                                     & \multicolumn{5}{l|[2pt]}{Agente inmobiliario --- Arrendatario} \\
-	                                     & \multicolumn{5}{l|[2pt]}{Agente inmobiliario --- Intercambiador} \\
+	\multirow{3}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Administrativo --- Banco} \\
+	                                     & \multicolumn{5}{l|[2pt]}{Administrativo --- Cliente} \\
+	                                     & \multicolumn{5}{l|[2pt]}{Administrativo --- Inquilino} \\
 	\hline
-	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{\ref{caso-uso-subir-propiedad}, \ref{caso-uso-aprobar-propiedad}, \ref{caso-uso-gestionar-contrato}, \ref{caso-uso-gestionar-reclamacion-deuda}, \ref{caso-uso-gestionar-reclamacion-averia}, \ref{caso-uso-intercambiar-vivienda}} \\
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
 	\hline
-	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 12/04/20 & \textbf{Versión} & 1.0 \\
 	\tabucline[2pt]{-}
 \end{tabu}
 
@@ -48,26 +47,148 @@
 \end{tabu}
 \end{center}
 
-\subsection{Arrendador}
+\subsection{Banco}\label{banco}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Arrendador}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-02}\label{actor-arrendador}} \\
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Banco}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsection}} \\
+	\hline
+	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Entidad externa a la empresa que gestiona dinero por su cuenta} \\
+	\hline
+	\multirow{2}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Recibe recibos de la empresa} \\
+	                                          & \multicolumn{5}{l|[2pt]}{Devuelve recibos si son incorrectos} \\
+	\hline
+	\textbf{Relaciones}      & \multicolumn{5}{l|[2pt]}{Banco --- Administrativo} \\
+	\hline
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
+	\hline
+	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 12/04/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{3cm}|p{8.81cm}|p{3cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{3}{|[2pt]l|[2pt]}{\textbf{Atributos}} \\
+	\hline
+	\textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo} \\
+	\hline
+	Nombre & Nombre del banco & Cadena de caracteres \\
+	\hline
+	ID & Identificador único al que enviar recibos & Cadena de caracteres \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Comentarios} \\
+	\hline
+	\\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsection{Inquilino}\label{inquilino}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Inquilino}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsection}} \\
+	\hline
+	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Persona que alquila una propiedad de cualquier tipo} \\
+	\hline
+	\multirow{2}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Busca propiedades para alquilar} \\
+	                                          & \multicolumn{5}{l|[2pt]}{Tiene un administrativo asignado} \\
+	\hline
+	\multirow{2}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Inquilino --- Miembro} \\
+	                                     & \multicolumn{5}{l|[2pt]}{Inquilino --- Administrativo} \\
+	\hline
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
+	\hline
+	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 12/04/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{3cm}|p{8.81cm}|p{3cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{3}{|[2pt]l|[2pt]}{\textbf{Atributos}} \\
+	\hline
+	\textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo} \\
+	\hline
+	Datos personales & Nombre, Apellido, DNI, correo, teléfono & Lista de cadenas de caracteres \\
+	\hline
+	Ubicación & Áreas en las que se ubican sus propiedades & Lista de áreas de coordenadas \\
+	\hline
+	Valoración & Media de las valoraciones recibidas por los arrendadores & Decimal [0-5] \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Comentarios} \\
+	\hline
+	\\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsection{Invitado}\label{invitado}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Invitado}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsection}} \\
+	\hline
+	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Entidad externa a la empresa que gestiona dinero por su cuenta} \\
+	\hline
+	\textbf{Características} & \multicolumn{5}{l|[2pt]}{Puede buscar viviendas de intercambio sin cuenta de miembro} \\
+	\hline
+	\textbf{Relaciones}      & \multicolumn{5}{l|[2pt]}{} \\
+	\hline
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
+	\hline
+	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 12/04/20 & \textbf{Versión} & 1.0 \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{3cm}|p{8.81cm}|p{3cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\multicolumn{3}{|[2pt]l|[2pt]}{\textbf{Atributos}} \\
+	\hline
+	\textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo} \\
+	\hline
+	Nombre & Nombre del banco & Cadena de caracteres \\
+	\tabucline[2pt]{-}
+\end{tabu}
+
+\begin{tabu}{|[2pt]p{15.68cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Comentarios} \\
+	\hline
+	\\
+	\tabucline[2pt]{-}
+\end{tabu}
+\end{center}
+
+\subsection{Miembro}\label{miembro}
+
+\begin{center}
+\begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
+	\tabucline[2pt]{-}
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Miembro}} & \multicolumn{1}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsection}} \\
 	\hline
 	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Persona que pone en alquiler una propiedad de cualquier tipo} \\
 	\hline
 	\multirow{3}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Posee propiedades que registra en el sistema} \\
-	                                          & \multicolumn{5}{l|[2pt]}{Busca un arrendatario} \\
-	                                          & \multicolumn{5}{l|[2pt]}{Tiene un agente inmobiliario asignado} \\
+	                                          & \multicolumn{5}{l|[2pt]}{Busca un inquilino} \\
+	                                          & \multicolumn{5}{l|[2pt]}{Tiene un administrativo asignado} \\
 	\hline
-	\multirow{3}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Arrendador --- Arrendatario} \\
-	                                     & \multicolumn{5}{l|[2pt]}{Arrendador --- Agente inmobiliario} \\
-	                                     & \multicolumn{5}{l|[2pt]}{Arrendador $\longrightarrow$ Intercambiador} \\
+	\multirow{2}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Miembro --- Inquilino} \\
+	                                    & \multicolumn{5}{l|[2pt]}{Miembro --- Administrativo} \\
 	\hline
-	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{\ref{caso-uso-registrar-usuario}, \ref{caso-uso-subir-propiedad}, \ref{caso-uso-gestionar-anuncio}, \ref{caso-uso-solicitar-visita}, \ref{caso-uso-aprobar-propiedad}, \ref{caso-uso-gestionar-contrato}, \ref{caso-uso-gestionar-reclamacion-deuda}, \ref{caso-uso-gestionar-reclamacion-averia}, \ref{caso-uso-apuntarse-intercambio}} \\
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
 	\hline
-	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 12/04/20 & \textbf{Versión} & 1.0 \\
 	\tabucline[2pt]{-}
 \end{tabu}
 
@@ -98,24 +219,22 @@
 \end{tabu}
 \end{center}
 
-\subsection{Arrendatario}
+\subsection{\texttt{SistemaAutomatizaciónPagos}}\label{sistema-automatizacion-pagos}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Arrendatario}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-03}\label{actor-arrendatario}} \\
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\code{SistemaAutomatizaciónPagos}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsection}} \\
 	\hline
-	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Persona que alquila una propiedad de cualquier tipo} \\
+	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Entidad externa a la empresa que gestiona dinero por su cuenta} \\
 	\hline
-	\multirow{2}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Busca propiedades para alquilar} \\
-	                                          & \multicolumn{5}{l|[2pt]}{Tiene un agente inmobiliario asignado} \\
+	\textbf{Características} & \multicolumn{5}{l|[2pt]}{Automatiza los pagos a los miembros} \\
 	\hline
-	\multirow{2}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Arrendatario --- Arrendador} \\
-	                                     & \multicolumn{5}{l|[2pt]}{Arrendatario --- Agente inmobiliario} \\
+	\textbf{Relaciones}      & \multicolumn{5}{l|[2pt]}{\code{SistemaAutomatizaciónPagos} --- Miembro} \\
 	\hline
-	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{\ref{caso-uso-registrar-usuario}, \ref{caso-uso-buscar-propiedad}, \ref{caso-uso-solicitar-visita}, \ref{caso-uso-gestionar-contrato}, \ref{caso-uso-gestionar-reclamacion-deuda}, \ref{caso-uso-gestionar-reclamacion-averia}} \\
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
 	\hline
-	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 12/04/20 & \textbf{Versión} & 1.0 \\
 	\tabucline[2pt]{-}
 \end{tabu}
 
@@ -124,12 +243,6 @@
 	\multicolumn{3}{|[2pt]l|[2pt]}{\textbf{Atributos}} \\
 	\hline
 	\textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo} \\
-	\hline
-	Datos personales & Nombre, Apellido, DNI, correo, teléfono & Lista de cadenas de caracteres \\
-	\hline
-	Ubicación & Áreas en las que se ubican sus propiedades & Lista de áreas de coordenadas \\
-	\hline
-	Valoración & Media de las valoraciones recibidas por los arrendadores & Decimal [0-5] \\
 	\tabucline[2pt]{-}
 \end{tabu}
 
@@ -142,24 +255,22 @@
 \end{tabu}
 \end{center}
 
-\subsection{Intercambiador}
+\subsection{\texttt{Temporizador}}\label{temporizador}
 
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\textbf{Intercambiador}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{ACT-04}\label{actor-intercambiador}} \\
+	\textbf{Actor}           & \multicolumn{4}{p{9cm}|}{\code{Temporizador}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsection}} \\
 	\hline
-	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Arrendador que forma parte del sistema de intercambios} \\
+	\textbf{Descripción}     & \multicolumn{5}{l|[2pt]}{Sistema automático de activación regular (\code{cron})} \\
 	\hline
-	\multirow{2}{*}{\textbf{Características}} & \multicolumn{5}{l|[2pt]}{Ofrece viviendas para intercambiar} \\
-	                                          & \multicolumn{5}{l|[2pt]}{Intercambia viviendas con otros intercambiadores} \\
+	\textbf{Características} & \multicolumn{5}{l|[2pt]}{Genera recibos de alquiler} \\
 	\hline
-	\multirow{2}{*}{\textbf{Relaciones}} & \multicolumn{5}{l|[2pt]}{Intercambiador --- Intercambiador} \\
-	                                     & \multicolumn{5}{l|[2pt]}{Intercambiador --- Agente inmobiliario} \\
+	\textbf{Relaciones}      & \multicolumn{5}{l|[2pt]}{} \\
 	\hline
-	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{\ref{caso-uso-intercambiar-vivienda}} \\
+	\textbf{Referencias}     & \multicolumn{5}{l|[2pt]}{} \\
 	\hline
-	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 26/03/20 & \textbf{Versión} & 1.0 \\
+	\textbf{Autor}           & Grupo D1\_7 & \textbf{Fecha} & 12/04/20 & \textbf{Versión} & 1.0 \\
 	\tabucline[2pt]{-}
 \end{tabu}
 
@@ -168,10 +279,6 @@
 	\multicolumn{3}{|[2pt]l|[2pt]}{\textbf{Atributos}} \\
 	\hline
 	\textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo} \\
-	\hline
-	Estancias & Registro de anteriores intercambios & \\
-	\hline
-	Valoración & Media de las valoraciones recibidas por los intercambiadores & Decimal [0-5] \\
 	\tabucline[2pt]{-}
 \end{tabu}
 
