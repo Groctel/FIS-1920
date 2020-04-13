@@ -5,7 +5,7 @@
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{BuscarViviendasIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\code{BuscarViviendasIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
 	\tabucline[2pt]{-}
 	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro, Invitado} \\
 	\hline
@@ -79,7 +79,7 @@
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{SolicitarIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\code{SolicitarIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
 	\tabucline[2pt]{-}
 	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
 	\hline
@@ -151,7 +151,7 @@
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{RechazarIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\code{RechazarIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
 	\tabucline[2pt]{-}
 	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
 	\hline
@@ -221,13 +221,13 @@
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{AceptarIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\code{AceptarIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
 	\tabucline[2pt]{-}
 	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small \ref{canjear-intercambio-por-puntos}} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small \ref{cu-canjear-intercambio-por-puntos}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Debe existir una solicitud de intercambio} \\
 	\hline
@@ -294,13 +294,13 @@
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{CanjearIntercambioPorPuntos}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\code{CanjearIntercambioPorPuntos}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
 	\tabucline[2pt]{-}
 	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small \ref{consulta-guest-points}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small \ref{aceptar-intercambio}} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small \ref{consulta-guest-points}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small \ref{cu-aceptar-intercambio}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Debe haberse realizado un intercambio} \\
 	\hline
@@ -364,7 +364,7 @@
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{AnularSolicitudIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\code{AnularSolicitudIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
 	\tabucline[2pt]{-}
 	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
 	\hline
@@ -434,7 +434,7 @@
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{AnularIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\code{AnularIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
 	\tabucline[2pt]{-}
 	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
 	\hline
@@ -504,7 +504,7 @@
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{PuntuarIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\code{PuntuarIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
 	\tabucline[2pt]{-}
 	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
 	\hline
@@ -574,7 +574,7 @@
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{AñadirOpiniónIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\code{AñadirOpiniónIntercambio}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
 	\tabucline[2pt]{-}
 	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
 	\hline
@@ -645,13 +645,13 @@
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{PagoCuotaAnual}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\code{PagoCuotaAnual}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
 	\tabucline[2pt]{-}
 	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Miembro} \\
 	\hline
 	\textbf{Tipo}           & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Primario y esencial} \\
 	\hline
-	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small \ref{consulta-datos-inquilino}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small \ref{cu-pago-paypal} \ref{cu-pago-tarjeta}} \\
+	\textbf{Referencias}    & \multicolumn{2}{p{6.5cm}|}{\small \ref{consulta-datos-inquilino}} & \multicolumn{3}{p{4.5cm}|[2pt]}{\small \ref{cu-pago-paypal} \ref{cu-pago-con-tarjeta}} \\
 	\hline
 	\textbf{Precondición}   & \multicolumn{5}{p{12.2cm}|[2pt]}{\small Se debe haber llegado a un acuerdo y concretado un intercambio} \\
 	\hline
@@ -685,8 +685,6 @@
 	\hline
 	\textbf{2} & {\small El miembro paga la cuota anual} & \textbf{3} & {\small Se cobra por uno de los dos medios disponibles y se marca como pagado} \\
 	\hline
-	\textbf{}  & {\small } & \textbf{} & {\small }\\
-	\hline
    \textbf{}  & {\small }& \textbf{N} & {\small \textit{Incluir(CU\_3.11\_PagoConTarjeta), (CU\_3.12\_PagoPaypal)}} \\
 	\tabucline[2pt]{-}
 \end{tabu}
@@ -703,7 +701,7 @@
 	\tabucline[2pt]{-}
 	\multicolumn{2}{|[2pt]p{3.92cm}|}{\textbf{Frecuencia esperada}} & {\small Una vez al año} & \multicolumn{1}{p{2.5cm}|}{\textbf{Rendimiento}} & {\small Inmediato} \\
 	\hline
-	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Alta) ---} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
+	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Importancia}} & {\small Alta} & \multicolumn{1}{p{2.5cm}|}{\textbf{Urgencia}} & {\small Alta} \\
 	\hline
 	\multicolumn{2}{|[2pt]p{3,92cm}|}{\textbf{Estado}} & {\small Iniciando su desarrollo} & \multicolumn{1}{p{2.5cm}|}{\textbf{Estabilidad}} & {\small Alta} \\
 	\tabucline[2pt]{-}
@@ -721,7 +719,7 @@
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{PagoConTarjeta}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\code{PagoConTarjeta}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
 	\tabucline[2pt]{-}
 	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small SistemaAutorizaciónPagos} \\
 	\hline
@@ -791,7 +789,7 @@
 \begin{center}
 \begin{tabu}{|[2pt]p{2.5cm}|p{5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|[2pt]}
 	\tabucline[2pt]{-}
-	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\texttt{PagoPayPal}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
+	\textbf{Caso de uso}    & \multicolumn{4}{p{9cm}|}{\textbf{\code{PagoPayPal}}} & \multicolumn{0}{c|[2pt]}{\cellcolor{gray!25}\textbf{\thesubsubsection}} \\
 	\tabucline[2pt]{-}
 	\textbf{Actores}        & \multicolumn{5}{p{12.2cm}|[2pt]}{\small SistemaAutorizaciónPagos} \\
 	\hline
