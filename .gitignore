@@ -7,3 +7,6 @@ obj/
 *.out
 *.pdf
 *.toc
+
+#Las copias de seguridad de Visual Paradigm y demás mierdas
+*.vpp.*
