@@ -1,16 +1,249 @@
-\section{\texttt{nombreContrato}}
+\section{\texttt{consultarContratoAlquiler}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
-\textbf{Nombre}          & \code{nombreContrato (argumentos)} \\
+\textbf{Nombre}          & \code{consultarContratoAlquiler (idContratoAlquiler)} \\
 \midrule
-\textbf{Responsabilidad} &                                    \\
-\textbf{Tipo}            &                                    \\
-\textbf{Notas}           &                                    \\
-\textbf{Excepciones}     &                                    \\
-\textbf{Salida}          &                                    \\
-\textbf{Precondiciones}  &                                    \\
-\textbf{Postcondiciones} &                                    \\
-\textbf{Autor}           &                                    \\
+\textbf{Responsabilidad} & Obtener la información de un alquiler determinado \\
+\textbf{Tipo}            & Gestión Alquileres                 \\
+\textbf{Notas}           & /                                  \\
+\textbf{Excepciones}     & /                                  \\
+\textbf{Salida}          & infoContratoAlquiler = lista compuesta por {idViviendaAlquiler, idInquilino, fechaInicioContrato, fechaFinContrato, fianza, cuotaMensual} \\
+\textbf{Precondiciones}  & -Existe el objeto Contrato identificado por idContratoAlquiler \\
+\textbf{Postcondiciones} & /                                  \\
+\textbf{Autor}           & Clara Romero Lara                  \\
 \end{tabular}
 \end{center}
+
+\section{\texttt{altaAvería}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{altaAvería (idViviendaAlquiler, decripcionAveria, fechaNotificacion)} \\
+\midrule
+\textbf{Responsabilidad} & Dar de alta una avería en una vivienda alquilada \\
+\textbf{Tipo}            & Gestión Alquileres                 \\
+\textbf{Notas}           & /                                  \\
+\textbf{Excepciones}     & /                                  \\
+\textbf{Salida}          & idAveria = código identificador único para la avería \\
+\textbf{Precondiciones}  & -Existe el objeto ViviendaAlquiler identificado por idViviendaAlquiler \\
+\textbf{Postcondiciones} & -Se crea un objeto Averias inicializado con los parámetros de entrada
+-Se crea una relación entre el objeto Averias y el objeto ViviendaAlquiler \\
+\textbf{Autor}           & Clara Romero Lara                  \\
+\end{tabular}
+\end{center}
+
+\section{\texttt{altaContrato}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{altaContrato (idViviendaAlquiler, idInquilino, fechaInicioContrato, fechaFinContrato, fianza, cuotaMensual)} \\
+\midrule
+\textbf{Responsabilidad} & Dar de alta un contrato de alquiler entre un inquilino y un cliente \\
+\textbf{Tipo}            & Gestión Alquileres                 \\
+\textbf{Notas}           & /                                  \\
+\textbf{Excepciones}     & Ya existe un contrato asociado a idViviendaAlquiler con otro idInquilino     \\
+\textbf{Salida}          & idContratoAlquiler = código identificador único para el contrato de alquiler \\
+\textbf{Precondiciones}  & -Existe el objeto ViviendaAlquiler identificado por idViviendaAlquier
+-Existe el objeto Inquilino identificado por idInquilino \\
+\textbf{Postcondiciones} & -Se crea un objeto ContratoAlquiler inicializado con los parámetros de entrada
+-Se crea una relación entre el inquilino y la vivienda en alquiler \\
+\textbf{Autor}           & Clara Romero Lara                  \\
+\end{tabular}
+\end{center}
+
+\section{\texttt{bajaContratoAlquiler}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{bajaContratoAlquiler (idContratoAlquiler)} \\
+\midrule
+\textbf{Responsabilidad} & Dar de baja un contrato de alquiler\\
+\textbf{Tipo}            & Gestión Alquileres                 \\
+\textbf{Notas}           & /                                  \\
+\textbf{Excepciones}     & /                                  \\
+\textbf{Precondiciones}  & -Existe el objeto ContratoAlquiler identificado por idContratoAlquiler \\
+\textbf{Salida}          & /                                  \\
+\textbf{Postcondiciones} & -Se elimina el objeto ContratoAlquiler identificado por idContratoAlquiler
+-Se pierde la relación entre el inquilino (asociado a idContratoAlquiler) y la vivienda en alquiler (asociada a idContratoAlquiler) \
+\textbf{Autor}           & Clara Romero Lara                  \\
+\end{tabular}
+\end{center}
+
+\section{\texttt{altaInquilino}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{altaInquilino (dni, nombre, apellidos, direccion, numeroCuentaBancaria)} \\
+\midrule
+\textbf{Responsabilidad} & Dar de alta a un inquilino         \\
+\textbf{Tipo}            & Gestión Alquileres                 \\
+\textbf{Notas}           & /                                  \\
+\textbf{Excepciones}     & Ya existe un inquilino con ese DNI asociado                \\
+\textbf{Salida}          & idInquilino = código identificador único para el inquilino \\
+\textbf{Precondiciones}  &  /                                 \\
+\textbf{Postcondiciones} &  -Se crea un objeto Inquilino inicializado con los parámetros de entrada \\
+\textbf{Autor}           & Clara Romero Lara                  \\
+\end{tabular}
+\end{center}
+
+\section{\texttt{bajaInquilino}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{bajaInquilino (idInquilino)} \\
+\midrule
+\textbf{Responsabilidad} & Dar de baja a un inquilino         \\
+\textbf{Tipo}            & Gestión Alquileres                 \\
+\textbf{Notas}           & /                                  \\
+\textbf{Excepciones}     & /                                  \\
+\textbf{Salida}          & /                                  \\
+\textbf{Precondiciones}  & -Existe el objeto Inquilino identificado por idInquilino \\
+\textbf{Postcondiciones} & -Se elimina el objeto Inquilino y las relaciones existentes de este \\
+\textbf{Autor}           & Clara Romero Lara                  \\
+\end{tabular}
+\end{center}
+
+\section{\texttt{devolverFianzaInquilino}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{devolverFianzaInquilino (idContratoAlquiler, fecha)} \\
+\midrule
+\textbf{Responsabilidad} & Devolver la fianza a un inquilino que ha dado de baja su alquiler \\
+\textbf{Tipo}            & Gestión Alquileres                 \\
+\textbf{Notas}           & /                                  \\
+\textbf{Excepciones}     & El contrato de alquiler no ha sido dado de baja o el inquilino está marcado como moroso \\
+\textbf{Salida}          & /                                  \\
+\textbf{Precondiciones}  & -Existe el objeto ContratoAlquiler identificado por idContratoAlquiler
+-Existe el objeto Inquilino identificado por idInquilino \\
+\textbf{Postcondiciones} & -Se hace un ingreso bancario al numeroCuentaBancaria del Inquilino idInquilino por una cantidad igual a la fianza mostrada en el ContratoAlquiler idContratoAlquiler \\
+\textbf{Autor}           & Clara Romero Lara                  \\
+\end{tabular}
+\end{center}
+
+\section{\texttt{pagarReciboMetalico}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{pagarReciboMetalico (idInquilino, idContratoAlquiler, mensualidad, fecha)} \\
+\midrule
+\textbf{Responsabilidad} & Confirmar que un pago en metálico se ha recibido \\
+\textbf{Tipo}            & Gestión Alquileres                 \\
+\textbf{Notas}           & /                                  \\
+\textbf{Excepciones}     & El inquilino ya ha pagado el recibo correspondiente al mes \\
+\textbf{Salida}          & idReciboPagado = código identificador único para el recibo \\
+\textbf{Precondiciones}  & -Existe el objeto Inquilino identificado por idInquilino
+-Existe el objeto ContratoAlquiler identificado por idContratoAlquiler \\
+\textbf{Postcondiciones} & -Se crea un objeto RecibosAlquiler
+-Se crea un objeto IngresoInquilino
+-Se crea un objeto PagoCliente \\
+\textbf{Autor}           & Clara Romero Lara                  \\
+\end{tabular}
+\end{center}
+
+\section{\texttt{añadirPagoCuentaCliente}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{añadirPagoCuentaCliente (idCliente, idContratoAlquiler, mensualidad, fecha)} \\
+\midrule
+\textbf{Responsabilidad} & Añadir un pago realizado o recibido a la lista de pagos de la cuenta de un cliente \\
+\textbf{Tipo}            & Gestión Alquileres                 \\
+\textbf{Notas}           & /                                  \\
+\textbf{Excepciones}     & /                                  \\
+\textbf{Salida}          & /                                  \\
+\textbf{Precondiciones}  & -Existe el objeto Cliente identificado por idCliente
+-Existe el objeto ContratoAlquiler identificado por idContratoAlquiler \\
+\textbf{Postcondiciones} & -Se crea una relación entre PagoCliente y Cliente \\
+\textbf{Autor}           & Clara Romero Lara                  \\
+\end{tabular}
+\end{center}
+
+\section{\texttt{obtenerRecibosDevueltos}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{obtenerRecibosDevueltos (idInquilino, fecha)} \\
+\midrule
+\textbf{Responsabilidad} & Mostrar la lista de recibos devueltos por el banco de un inquilino \\
+\textbf{Tipo}            & Gestión Alquileres                 \\
+\textbf{Notas}           & /                                  \\
+\textbf{Excepciones}     & /                                  \\
+\textbf{Salida}          & listaIdRecibosDevueltos = lista compuesta por los {listaIdRecibos} menos los {listaIdRecibosPagados}, quedando solo los recibos sin pagar \\
+\textbf{Precondiciones}  & -Existe el objeto Inquilino identificado por idInquilino \\
+\textbf{Postcondiciones} & /                                  \\
+\textbf{Autor}           & Clara Romero Lara                  \\
+\end{tabular} 
+\end{center}
+
+\section{\texttt{obtenerRecibosPagados}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{obtenerRecibosPagados (idInquilino, fecha)} \\
+\midrule
+\textbf{Responsabilidad} & Mostrar la lista de recibos aceptados por el banco de un cliente \\
+\textbf{Tipo}            & Gestión Alquileres                 \\
+\textbf{Notas}           & /                                  \\
+\textbf{Excepciones}     & /                                  \\
+\textbf{Salida}          & listaIdRecibosPagados = lista compuesta por todos los {idReciboPagado}} \\
+\textbf{Precondiciones}  & -Existe el objeto Inquilino identificado por idInquilino \\
+\textbf{Postcondiciones} & /                                  \\
+\textbf{Autor}           & Clara Romero Lara                  \\
+\end{tabular}
+\end{center}
+
+\section{\texttt{iniciarTramiteMoroso}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{iniciarTramiteMoroso (idInquilino, listaIdRecibosDevueltos, fecha)} \\
+\midrule
+\textbf{Responsabilidad} & Marca a un inquilino como moroso \\
+\textbf{Tipo}            & Gestión Alquileres                 \\
+\textbf{Notas}           & /                                  \\
+\textbf{Excepciones}     & La listaIdRecibosDevueltos está vacía \\
+\textbf{Salida}          & /                                  \\
+\textbf{Precondiciones}  & -Existe el objeto Inquilino identificado por idInquilino 
+-El objeto listaIdRecibosDevueltos existe \\
+\textbf{Postcondiciones} & -Se envía una notificación al inquilino
+-El inquilino es marcado como moroso \\
+\textbf{Autor}           & Clara Romero Lara                  \\
+\end{tabular}
+\end{center}
+
+\section{\texttt{generarRecibosAlquiler}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{generarRecibosAlquiler (idCliente, fecha)} \\
+\midrule
+\textbf{Responsabilidad} & Devuelve la lista de los recibos asociados a un cliente \\
+\textbf{Tipo}            & Gestión Alquileres                 \\
+\textbf{Notas}           & /                                  \\
+\textbf{Excepciones}     & /                                  \\
+\textbf{Salida}          & listaIdRecibos = lista compuesta por todos los recibos que se generan automáticamente de un alquiler cada mes \\
+\textbf{Precondiciones}  & -Existe el objeto Cliente identificado por idCliente \\
+\textbf{Postcondiciones} & /                                  \\
+\textbf{Autor}           & Clara Romero Lara                  \\
+\end{tabular}
+\end{center}
+
+\section{\texttt{enviarReciboBanco}}
+
+\begin{center}
+\begin{tabular}{l p{13cm}}
+\textbf{Nombre}          & \code{enviarReciboBanco (idRecibo)} \\
+\midrule
+\textbf{Responsabilidad} & Manda un recibo al banco asociado a este \\
+\textbf{Tipo}            & Gestión Alquileres                 \\
+\textbf{Notas}           & /                                  \\
+\textbf{Excepciones}     & /                                  \\
+\textbf{Salida}          & /                                  \\
+\textbf{Precondiciones}  & -Existe el objeto Recibo identificado por idRecibo \\
+\textbf{Postcondiciones} & -Se crea una relación entre el recibo y el banco   \\
+\textbf{Autor}           & Clara Romero Lara                  \\
+\end{tabular}
+\end{center}
+
