@@ -29,8 +29,8 @@
 \textbf{Excepciones}     & \\
 \textbf{Salida}          & \code{idAveria} = código identificador único para la avería \\
 \textbf{Precondiciones}  & Existe el objeto ViviendaAlquiler identificado por idViviendaAlquiler \\
-\multirow{2}{*}{\textbf{Postcondiciones}} & --- Se crea un objeto Averias inicializado con los parámetros de entrada \\
-                                          & --- Se crea una relación entre el objeto Averias y el objeto ViviendaAlquiler \\
+\multirow{2}{*}{\textbf{Postcondiciones}} & --- Se creó un objeto Averias inicializado con los parámetros de entrada \\
+                                          & --- Se creó una relación entre el objeto Averias y el objeto ViviendaAlquiler \\
 \textbf{Autora}          & Clara Romero Lara \\
 \end{tabular}
 \end{center}
@@ -48,8 +48,8 @@
 \textbf{Salida}          & \code{idContratoAlquiler}= código identificador único para el contrato de alquiler \\
 \multirow{2}{*}{\textbf{Precondiciones}} & --- Existe el objeto \code{ViviendaAlquiler} identificado por \code{idViviendaAlquier} \\
                                          & --- Existe el objeto \code{Inquilino} identificado por \code{idInquilino} \\
-\multirow{2}{*}{\textbf{Postcondiciones}} & --- Se crea un objeto \code{ContratoAlquiler} inicializado con los parámetros de entrada \\
-                                          & --- Se crea una relación entre el inquilino y la vivienda en alquiler \\
+\multirow{2}{*}{\textbf{Postcondiciones}} & --- Se creó un objeto \code{ContratoAlquiler} inicializado con los parámetros de entrada \\
+                                          & --- Se creó una relación entre el inquilino y la vivienda en alquiler \\
 \textbf{Autora}          & Clara Romero Lara \\
 \end{tabular}
 \end{center}
@@ -66,8 +66,8 @@
 \textbf{Excepciones}     & \\
 \textbf{Precondiciones}  & Existe el objeto \code{ContratoAlquiler} identificado por \code{idContratoAlquiler} \\
 \textbf{Salida}          & \\
-\multirow{2}{*}{\textbf{Postcondiciones}} & --- Se elimina el objeto \code{ContratoAlquiler} identificado por \code{idContratoAlquiler} \\
-                                          & --- Se pierde la relación entre el inquilino (asociado a \code{idContratoAlquiler}) y la vivienda en alquiler (asociada a \code{idContratoAlquiler}) \\
+\multirow{2}{*}{\textbf{Postcondiciones}} & --- Se eliminó el objeto \code{ContratoAlquiler} identificado por \code{idContratoAlquiler} \\
+                                          & --- Se perdió la relación entre el inquilino (asociado a \code{idContratoAlquiler}) y la vivienda en alquiler (asociada a \code{idContratoAlquiler}) \\
 \textbf{Autora}          & Clara Romero Lara \\
 \end{tabular}
 \end{center}
@@ -84,7 +84,7 @@
 \textbf{Excepciones}     & Ya existe un inquilino con ese DNI asociado \\
 \textbf{Salida}          & \code{idInquilino} = código identificador único para el inquilino \\
 \textbf{Precondiciones}  & \\
-\textbf{Postcondiciones} & Se crea un objeto Inquilino inicializado con los parámetros de entrada \\
+\textbf{Postcondiciones} & Se creó un objeto Inquilino inicializado con los parámetros de entrada \\
 \textbf{Autora}          & Clara Romero Lara \\
 \end{tabular}
 \end{center}
@@ -101,7 +101,7 @@
 \textbf{Excepciones}     & \\
 \textbf{Salida}          & \\
 \textbf{Precondiciones}  & Existe el objeto \code{Inquilino} identificado por \code{idInquilino} \\
-\textbf{Postcondiciones} & Se elimina el objeto \code{Inquilino} y las relaciones existentes de éste \\
+\textbf{Postcondiciones} & Se eliminó el objeto \code{Inquilino} y las relaciones existentes de éste \\
 \textbf{Autora}          & Clara Romero Lara \\
 \end{tabular}
 \end{center}
@@ -119,7 +119,7 @@
 \textbf{Salida}          & \\
 \multirow{2}{*}{\textbf{Precondiciones}} & --- Existe el objeto \code{ContratoAlquiler} identificado por \code{idContratoAlquiler} \\
                                          & --- Existe el objeto \code{Inquilino} identificado por \code{idInquilino} \\
-\textbf{Postcondiciones} & Se hace un ingreso bancario al \code{numeroCuentaBancaria} del \code{Inquilino} \code{idInquilino} por una cantidad igual a la fianza mostrada en el \code{ContratoAlquiler} \code{idContratoAlquiler} \\
+\textbf{Postcondiciones} & Se hizo un ingreso bancario al \code{numeroCuentaBancaria} del \code{Inquilino} \code{idInquilino} por una cantidad igual a la fianza mostrada en el \code{ContratoAlquiler} \code{idContratoAlquiler} \\
 \textbf{Autora}          & Clara Romero Lara \\
 \end{tabular}
 \end{center}
@@ -137,9 +137,9 @@
 \textbf{Salida}          & idReciboPagado = código identificador único para el recibo \\
 \multirow{2}{*}{\textbf{Precondiciones}} & --- Existe el objeto \code{Inquilino} identificado por \code{idInquilino} \\
                                          & --- Existe el objeto \code{ContratoAlquiler} identificado por \code{idContratoAlquiler} \\
-\multirow{3}{*}{\textbf{Postcondiciones}} & --- Se crea un objeto \code{RecibosAlquiler} \\
-                                          & --- Se crea un objeto \code{IngresoInquilino} \\
-                                          & --- Se crea un objeto \code{PagoCliente} \\
+\multirow{3}{*}{\textbf{Postcondiciones}} & --- Se creó un objeto \code{RecibosAlquiler} \\
+                                          & --- Se creó un objeto \code{IngresoInquilino} \\
+                                          & --- Se creó un objeto \code{PagoCliente} \\
 \textbf{Autora}          & Clara Romero Lara \\
 \end{tabular}
 \end{center}
@@ -157,7 +157,7 @@
 \textbf{Salida}          & \\
 \multirow{2}{*}{\textbf{Precondiciones}} & --- Existe el objeto \code{Cliente} identificado por \code{idCliente} \\
                                          & --- Existe el objeto \code{ContratoAlquiler} identificado por \code{idContratoAlquiler} \\
-\textbf{Postcondiciones} & Se crea una relación entre \code{PagoCliente} y \code{Cliente} \\
+\textbf{Postcondiciones} & Se creó una relación entre \code{PagoCliente} y \code{Cliente} \\
 \textbf{Autora}          & Clara Romero Lara \\
 \end{tabular}
 \end{center}
@@ -209,8 +209,8 @@
 \textbf{Salida}          & \\
 \multirow{2}{*}{\textbf{Precondiciones}} & --- Existe el objeto \code{Inquilino} identificado por \code{idInquilino} \\
                                          & --- El objeto \code{listaIdRecibosDevueltos} existe \\
-\multirow{2}{*}{\textbf{Postcondiciones}} & --- Se envía una notificación al inquilino \\
-                                          & --- El inquilino es marcado como moroso \\
+\multirow{2}{*}{\textbf{Postcondiciones}} & --- Se envió una notificación al inquilino \\
+                                          & --- El inquilino se marcó como moroso \\
 \textbf{Autora}          & Clara Romero Lara \\
 \end{tabular}
 \end{center}
@@ -243,7 +243,7 @@
 \textbf{Excepciones}     & \\
 \textbf{Salida}          & \\
 \textbf{Precondiciones}  & Existe el objeto \code{Recibo} identificado por \code{idRecibo} \\
-\textbf{Postcondiciones} & Se crea una relación entre el recibo y el banco \\
+\textbf{Postcondiciones} & Se creó una relación entre el recibo y el banco \\
 \textbf{Autora}         & Clara Romero Lara \\
 \end{tabular}
 \end{center}
