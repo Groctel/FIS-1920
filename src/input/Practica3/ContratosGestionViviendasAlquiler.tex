@@ -1,6 +1,6 @@
-\section{Contratos \texttt{GestionViviendasAlquiler}}
+\section{Contratos \code{GestionViviendasAlquiler}}
 
-\subsection{\texttt{altaViviendaAlquiler}}
+\subsection{\code{altaViviendaAlquiler}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
@@ -17,7 +17,7 @@
 \end{tabular}
 \end{center}
 
-\subsection{\texttt{modificarDatosViviendaAlquiler}}
+\subsection{\code{modificarDatosViviendaAlquiler}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
@@ -29,12 +29,12 @@
 \textbf{Excepciones}     & \\
 \textbf{Salida}          & \\
 \textbf{Precondiciones}  & Existe el objeto \code{ViviendaAlquiler} identificado por \code{idViviendaAlquiler} \\
-\textbf{Postcondiciones} & La información de la vivienda queda modificada \\
+\textbf{Postcondiciones} & La información de la vivienda quedó modificada \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\texttt{bajaViviendaAlquiler}}
+\subsection{\code{bajaViviendaAlquiler}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
@@ -46,12 +46,12 @@
 \textbf{Excepciones}     & La vivienda ya está dada de baja \\
 \textbf{Salida}          & \\
 \textbf{Precondiciones}  & Existe el objeto \code{ViviendaAlquiler} identificado por \code{idViviendaAlquiler} \\
-\textbf{Postcondiciones} & La vivienda queda dada de baja, eliminándose el objeto \code{ViviendaAlquiler} \\
+\textbf{Postcondiciones} & La vivienda quedó dada de baja, eliminándose el objeto \code{ViviendaAlquiler} \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\texttt{consultarDatosViviendaAlquiler}}
+\subsection{\code{consultarDatosViviendaAlquiler}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
@@ -68,7 +68,7 @@
 \end{tabular}
 \end{center}
 
-\subsection{\texttt{altaOfertaViviendaAlquiler}}
+\subsection{\code{altaOfertaViviendaAlquiler}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
@@ -80,12 +80,12 @@
 \textbf{Excepciones}     & La oferta de alquiler ya se encuentra publicada \\
 \textbf{Salida}          & \code{idOfertaAlquiler} = código identificador único para la oferta \\
 \textbf{Precondiciones}  & Existe el objeto \code{ViviendaAlquiler} identificado por \code{idViviendaAlquiler} \\
-\textbf{Postcondiciones} & Se crea un objeto \code{OfertaAlquiler} \\
+\textbf{Postcondiciones} & Se creó un objeto \code{OfertaAlquiler} \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\texttt{altaPublicidad}}
+\subsection{\code{altaPublicidad}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
@@ -97,12 +97,12 @@
 \textbf{Excepciones}     & \\
 \textbf{Salida}          & \code{idPublicidad} = código identificador único para el anuncio \\
 \textbf{Precondiciones}  & Existe el objeto \code{ViviendaAlquiler} identificado por \code{idViviendaAlquiler} \\
-\textbf{Postcondiciones} & Se crea un objeto \code{Publicidad} \\
+\textbf{Postcondiciones} & Se creó un objeto \code{Publicidad} \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\texttt{bajaOfertaAlquilerVivienda}}
+\subsection{\code{bajaOfertaAlquilerVivienda}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
@@ -114,12 +114,12 @@
 \textbf{Excepciones}     & La oferta ya se encuentra dada de baja \\
 \textbf{Salida}          & \\
 \textbf{Precondiciones}  & Existe el objeto \code{OfertaAlquiler} identificado por \code{idOfertaAlquiler} \\
-\textbf{Postcondiciones} & La \code{OfertaAlquiler} queda dada de baja y se elimina el objeto \\
+\textbf{Postcondiciones} & La \code{OfertaAlquiler} quedó dada de baja y se elimina el objeto \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\texttt{bajaPublicidad}}
+\subsection{\code{bajaPublicidad}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
@@ -131,12 +131,12 @@
 \textbf{Excepciones}     & El anuncio ya se encuentra dado de baja \\
 \textbf{Salida}          & \\
 \textbf{Precondiciones}  & Existe el objeto \code{Publicidad} identificado por \code{idPublicidad} \\
-\textbf{Postcondiciones} & La \code{Publicidad} queda dada de baja y se elimina el objeto \\
+\textbf{Postcondiciones} & La \code{Publicidad} quedó dada de baja y se elimina el objeto \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\texttt{modificarOfertaAlquilerVivienda}}
+\subsection{\code{modificarOfertaAlquilerVivienda}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
@@ -148,12 +148,12 @@
 \textbf{Excepciones}     & \\
 \textbf{Salida}          & \\
 \textbf{Precondiciones}  & Existe el objeto \code{OfertaAlquiler} identificado por \code{idOfertaAlquiler} \\
-\textbf{Postcondiciones} & La información de la oferta de alquiler queda modificada \\
+\textbf{Postcondiciones} & La información de la oferta de alquiler quedó modificada \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\texttt{modificarPublicidad}}
+\subsection{\code{modificarPublicidad}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
@@ -165,18 +165,18 @@
 \textbf{Excepciones}     & \\
 \textbf{Salida}          & \\
 \textbf{Precondiciones}  & Existe el objeto \code{Publicidad} identificado por \code{idPublicidad} \\
-\textbf{Postcondiciones} & La información del anuncio queda modificada \\
+\textbf{Postcondiciones} & La información del anuncio quedó modificada \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\texttt{consultarOfertaAlquiler}}
+\subsection{\code{consultarOfertaAlquiler}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
 \textbf{Nombre}          & \code{consultarOfertaAlquiler (idOfertaAlquiler)} \\
 \midrule
-\textbf{Responsabilidad} & Mostrar la lista de recibos aceptados por el banco de un cliente \\
+\textbf{Responsabilidad} & Mostrar la oferta de alquiler de una vivienda \\
 \textbf{Tipo}            & Gestión Viviendas \\
 \textbf{Notas}           & \\
 \textbf{Excepciones}     & \\

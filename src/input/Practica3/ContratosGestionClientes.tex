@@ -1,6 +1,6 @@
-\section{Contratos \texttt{GestionClientes}}
+\section{Contratos \code{GestionClientes}}
 
-\subsection{\texttt{nuevoCliente}}
+\subsection{\code{nuevoCliente}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
@@ -12,13 +12,13 @@
 \textbf{Excepciones}     & Ya existe un \code{idCliente} en la BBDD asociado al \code{dni} introducido \\
 \textbf{Salida}          & \code{idCliente} = Código identificador del nuevo cliente \\
 \textbf{Precondiciones}  & No existe el objeto \code{Contrato} identificado por \code{idCliente}                                   \\
-\textbf{Postcondiciones} & Se crea un nuevo objeto de la clase \code{Cliente} con \code{dni}, \code{nombre} y \code{apellidos} inicializados \\
+\textbf{Postcondiciones} & Se creó un nuevo objeto de la clase \code{Cliente} con \code{dni}, \code{nombre} y \code{apellidos} inicializados \\
 \textbf{Autor}           & Fabián González Martín \\
 \end{tabular}
 \end{center}
 
 
-\subsection{\texttt{modificarCliente}}
+\subsection{\code{modificarCliente}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
@@ -28,13 +28,13 @@
 \textbf{Tipo}            & Gestión de clientes \\
 \textbf{Excepciones}     & No existe el \code{idCliente} que se intenta modificar \\
 \textbf{Precondiciones}  & Debe existir el \code{idCliente} que se pasa como argumento \\
-\textbf{Postcondiciones} & Se cambian los atributos del objeto \code{Cliente} identificado por \code{idCliente} por los que se pasan como argumento \\
+\textbf{Postcondiciones} & Se cambiaron los atributos del objeto \code{Cliente} identificado por \code{idCliente} por los que se pasan como argumento \\
 \textbf{Autor}           & Fabián González Martín \\
 \end{tabular}
 \end{center}
 
 
-\subsection{\texttt{eliminarCliente}}
+\subsection{\code{eliminarCliente}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
@@ -44,13 +44,13 @@
 \textbf{Tipo}            & Gestión de clientes \\
 \textbf{Excepciones}     & No existe el \code{idCliente} \\
 \textbf{Precondiciones}  & Debe existir el \code{idCliente} que se pasa como argumento \\
-\textbf{Postcondiciones} & Se destruye el objeto de la clase \code{Cliente} identificado por el atributo \code{idCliente} pasado como argumento \\
+\textbf{Postcondiciones} & Se destruyó el objeto de la clase \code{Cliente} identificado por el atributo \code{idCliente} pasado como argumento \\
 \textbf{Autor}           & Fabián González Martín \\
 \end{tabular}
 \end{center}
 
 
-\subsection{\texttt{consultarCliente}}
+\subsection{\code{consultarCliente}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
@@ -61,13 +61,13 @@
 \textbf{Excepciones}     & No existe el objeto de la clase \code{Cliente} con el \code{idCliente} pasado como argumento \\
 \textbf{Salida}          & \code{infoCliente} = \{\code{dni}, \code{nombre}, \code{apellidos}, \code{domicilio}, \code{cuentaDelBanco}\} para el objeto de la clase \code{Cliente} identificado por \code{idCliente} \\
 \textbf{Precondiciones}  & Debe existir un objeto de la clase \code{Cliente} con el \code{idCliente} pasado como argumento \\
-\textbf{Postcondiciones} & Se devuelve la información del cliente cuyo \code{idCliente} se haya pasado como argumento \\
+\textbf{Postcondiciones} & Se devolvió la información del cliente cuyo \code{idCliente} se pasó como argumento \\
 \textbf{Autor}           & Fabián González Martín \\
 \end{tabular}
 \end{center}
 
 
-\subsection{\texttt{viviendasAlquiladasCliente}}
+\subsection{\code{viviendasAlquiladasCliente}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
@@ -78,13 +78,13 @@
 \textbf{Excepciones}     & No existe el objeto de la clase \code{Cliente} con el \code{idCliente} pasado como argumento, o el cliente no tiene ninguna vivienda alquilada \\
 \textbf{Salida}          & \code{listaIdViviendasAlquiler} = lista de objetos de la clase \code{ViviendaAlquiler} alquilados por el \code{Cliente} cuyo \code{idCliente} se ha pasado como argumento \\
 \textbf{Precondiciones}  & El cliente identificado con el \code{idCliente} pasado como argumento debe existir, y tener alguna \code{ViviendaAlquiler} alquilada \\
-\textbf{Postcondiciones} & Se crea un enlace entre \code{listaIdViviendasAlquiler} y la lista de objetos de la clase \code{ViviendaAlquiler} válidos \\
+\textbf{Postcondiciones} & Se creó un enlace entre \code{listaIdViviendasAlquiler} y la lista de objetos de la clase \code{ViviendaAlquiler} válidos \\
 \textbf{Autor}           & Fabián González Martín \\
 \end{tabular}
 \end{center}
 
 
-\subsection{\texttt{cobrarAlquiler}}
+\subsection{\code{cobrarAlquiler}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
@@ -96,7 +96,7 @@
 \textbf{Excepciones}     & No existe el objeto de la clase \code{Cliente} con el \code{idCliente} pasado como argumento, el \code{Cliente} no tiene fondos suficientes, o no tiene ninguna vivienda alquilada \\
 \textbf{Salida}          & \code{recibos} = lista de \{\code{idCliente}, \code{idViviendaAlquiler}, \code{mensualidad}, \code{fecha}\} para todos los objetos de la clase \code{RecibosAlquiler} que cumplan con los crierios de consulta \\
 \textbf{Precondiciones}  & Deben ser válidos los argumentos \code{idCliente} y \code{idViviendaAlquiler}, además de tener una fecha posterior al resto de mensualidades                                   \\
-\textbf{Postcondiciones} & Se crea un objeto de la clase \code{PagoCliente} con \code{fecha} y \code{ingresoCuenta} inicializados, y otro objeto de la clase \code{IngresoInquilino} con \code{fecha} y \code{cargoBancario} inicializados \\
+\textbf{Postcondiciones} & Se creó un objeto de la clase \code{PagoCliente} con \code{fecha} y \code{ingresoCuenta} inicializados, y otro objeto de la clase \code{IngresoInquilino} con \code{fecha} y \code{cargoBancario} inicializados \\
 \textbf{Autor}           & Fabián González Martín \\
 \end{tabular}
 \end{center}
