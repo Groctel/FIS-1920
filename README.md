@@ -5,5 +5,5 @@
 Para clonar este repositorio junto con la plantilla de LaTeX utiliza la siguiente orden:
 
 ```sh
-git pull --recurse-submodules
+git clone --recurse-submodules
 ```
