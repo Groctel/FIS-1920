@@ -1,7 +1,8 @@
-HOME  = .
-BIN   = $(HOME)/bin
-SRC   = $(HOME)/src
+MAKEDIR = .
+BIN     = $(MAKEDIR)/bin
+SRC     = $(MAKEDIR)/src
 
+AQADEMIA = $${HOME}/texmf/tex/latex/aqademia/
 
 # =======================
 # Creación de directorios
@@ -39,7 +40,15 @@ define limpiatex
 	@printf "\n"
 endef
 
-all: saludo practicas despedida
+all: aqademia saludo practicas despedida
+
+aqademia:
+	@printf "\033[35;1m:: \033[0mActualizando aqademia...\n"
+	@  (find $(AQADEMIA) \
+	   && git -C $(AQADEMIA) pull) 1>/dev/null 2>&1\
+	|| (mkdir -p ~/texmf/tex/latex \
+	   && git clone https://github.com/Groctel/aqademia $(AQADEMIA)) \
+	      1>/dev/null 2>&1
 
 saludo:
 	@printf "\033[35;1m:: \033[0mComenzando compilación\n"

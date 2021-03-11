@@ -1,4 +1,4 @@
-\documentclass[10pt]{report}
+\documentclass[10pt]{aqademic}
 
 % Language and input encoding
 
@@ -6,12 +6,10 @@
 
 % Document settings
 
-\usepackage{titling}
-	\author{González Martín, Romero Lara, Rubio Gil}
-	\title{Fundamentos\ de\ la\ ingeniería\ del\ software}
-	\date{\today}
+\author{González Martín, Romero Lara, Rubio Gil}
+\title{Fundamentos\ de\ la\ ingeniería\ del\ software}
+\date{\today}
 
-\usepackage[title=\thetitle]{aqademia}
 \usepackage{array}
 	\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 \usepackage{colortbl}
@@ -24,9 +22,9 @@
 \usepackage[titles]{tocloft}
 	\renewcommand*\cftsubsecnumwidth{1.5cm}
 
-\aqchap{Práctica }
-\aqssec{}
-\aqsssec{}
+\AqSetChapter{Práctica }
+\AqSetSection{}
+\AqSetSubsection{}
 \titleformat{\subsubsection}[block]{\normalfont\bfseries\large}{}{0pt}{}[]
 \setcounter{secnumdepth}{3}
 
@@ -34,11 +32,13 @@
 
 \begin{document}
 
-\aqtitlepage[nolicense]
-            [Fabián González Martín, Clara María Romero Lara, Atanasio José Rubio Gil]
-            {Grado en Ingeniería Informática}
-            {Prácticas}
-            {}
+\AqMaketitle[%
+	author   = Fabián González Martín{,} Clara María Romero Lara{,} Atanasio José Rubio Gil,
+	cover    = titlepage.png,
+	org      = Grado en Ingeniería Informática,
+	subtitle = Prácticas,
+	url      = https://github.com/Groctel/ugr-informatica
+]
 \tableofcontents
 
 \chapter{Ingeniería de requisitos: Lista inicial de requisitos}

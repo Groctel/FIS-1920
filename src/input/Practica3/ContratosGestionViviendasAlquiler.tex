@@ -1,187 +1,187 @@
-\section{Contratos \code{GestionViviendasAlquiler}}
+\section{Contratos \texttt{GestionViviendasAlquiler}}
 
-\subsection{\code{altaViviendaAlquiler}}
+\subsection{\texttt{altaViviendaAlquiler}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
-\textbf{Nombre}          & \code{altaViviendaAlquiler (idCliente, esCasa, direccion, cuotaMensualBase, variacionAdmitidaCuota, descripcion, foto)} \\
+\textbf{Nombre}          & \texttt{altaViviendaAlquiler (idCliente, esCasa, direccion, cuotaMensualBase, variacionAdmitidaCuota, descripcion, foto)} \\
 \midrule
 \textbf{Responsabilidad} & Dar de alta una vivienda de alquiler \\
 \textbf{Tipo}            & Gestión Viviendas \\
 \textbf{Notas}           & \\
 \textbf{Excepciones}     & La vivienda ya está dada de alta \\
-\textbf{Salida}          & \code{idViviendaAlquiler} = código identificador único para la vivienda \\
-\textbf{Precondiciones}  & Existe el objeto \code{Cliente} identificado por \code{idCliente} y éste ha introducido la \code{direccion}, \code{cuotaMensualBase}, \code{variacionAdmitidaCuota}, \code{descripcion} y \code{foto} de la vivienda \\
+\textbf{Salida}          & \texttt{idViviendaAlquiler} = código identificador único para la vivienda \\
+\textbf{Precondiciones}  & Existe el objeto \texttt{Cliente} identificado por \texttt{idCliente} y éste ha introducido la \texttt{direccion}, \texttt{cuotaMensualBase}, \texttt{variacionAdmitidaCuota}, \texttt{descripcion} y \texttt{foto} de la vivienda \\
 \textbf{Postcondiciones} & \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\code{modificarDatosViviendaAlquiler}}
+\subsection{\texttt{modificarDatosViviendaAlquiler}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
-\textbf{Nombre}          & \code{modificarDatosViviendaAlquiler (idViviendaAlquiler, idCliente, esCasa, direccion, cuotaMensualBase, variacionAdmitidaCuota, descripcion, foto)} \\
+\textbf{Nombre}          & \texttt{modificarDatosViviendaAlquiler (idViviendaAlquiler, idCliente, esCasa, direccion, cuotaMensualBase, variacionAdmitidaCuota, descripcion, foto)} \\
 \midrule
 \textbf{Responsabilidad} & Modificar los datos de una vivienda dada de alta \\
 \textbf{Tipo}            & Gestión Viviendas \\
 \textbf{Notas}           & \\
 \textbf{Excepciones}     & \\
 \textbf{Salida}          & \\
-\textbf{Precondiciones}  & Existe el objeto \code{ViviendaAlquiler} identificado por \code{idViviendaAlquiler} \\
+\textbf{Precondiciones}  & Existe el objeto \texttt{ViviendaAlquiler} identificado por \texttt{idViviendaAlquiler} \\
 \textbf{Postcondiciones} & La información de la vivienda quedó modificada \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\code{bajaViviendaAlquiler}}
+\subsection{\texttt{bajaViviendaAlquiler}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
-\textbf{Nombre}          & \code{bajaViviendaAlquiler (idViviendaAlquiler)} \\
+\textbf{Nombre}          & \texttt{bajaViviendaAlquiler (idViviendaAlquiler)} \\
 \midrule
 \textbf{Responsabilidad} & Dar de baja una vivienda \\
 \textbf{Tipo}            & Gestión Viviendas \\
 \textbf{Notas}           & \\
 \textbf{Excepciones}     & La vivienda ya está dada de baja \\
 \textbf{Salida}          & \\
-\textbf{Precondiciones}  & Existe el objeto \code{ViviendaAlquiler} identificado por \code{idViviendaAlquiler} \\
-\textbf{Postcondiciones} & La vivienda quedó dada de baja, eliminándose el objeto \code{ViviendaAlquiler} \\
+\textbf{Precondiciones}  & Existe el objeto \texttt{ViviendaAlquiler} identificado por \texttt{idViviendaAlquiler} \\
+\textbf{Postcondiciones} & La vivienda quedó dada de baja, eliminándose el objeto \texttt{ViviendaAlquiler} \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\code{consultarDatosViviendaAlquiler}}
+\subsection{\texttt{consultarDatosViviendaAlquiler}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
-\textbf{Nombre}          & \code{consultarDatosViviendaAlquiler (idViviendaAlquiler)} \\
+\textbf{Nombre}          & \texttt{consultarDatosViviendaAlquiler (idViviendaAlquiler)} \\
 \midrule
 \textbf{Responsabilidad} & Mostrar los datos de una vivienda \\
 \textbf{Tipo}            & Gestión Viviendas \\
 \textbf{Notas}           & \\
 \textbf{Excepciones}     & \\
-\textbf{Precondiciones}  & Existe el objeto \code{ViviendaAlquiler} identificado por \code{idViviendaAlquiler} \\
-\textbf{Salida}          & \code{infoViviendaAlquiler} = lista compuesta por \{\code{direccion}, \code{cuotaMensualBase}, \code{variacionAdmitidaCuota}, \code{descripcion}\} \\
+\textbf{Precondiciones}  & Existe el objeto \texttt{ViviendaAlquiler} identificado por \texttt{idViviendaAlquiler} \\
+\textbf{Salida}          & \texttt{infoViviendaAlquiler} = lista compuesta por \{\texttt{direccion}, \texttt{cuotaMensualBase}, \texttt{variacionAdmitidaCuota}, \texttt{descripcion}\} \\
 \textbf{Postcondiciones} & \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\code{altaOfertaViviendaAlquiler}}
+\subsection{\texttt{altaOfertaViviendaAlquiler}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
-\textbf{Nombre}          & \code{altaOfertaViviendaAlquiler (idViviendaAlquiler, fechaInicio, fechaFin, condicionesAlquiler)} \\
+\textbf{Nombre}          & \texttt{altaOfertaViviendaAlquiler (idViviendaAlquiler, fechaInicio, fechaFin, condicionesAlquiler)} \\
 \midrule
 \textbf{Responsabilidad} & Publicar una oferta de alquiler de una vivienda \\
 \textbf{Tipo}            & Gestión Viviendas \\
 \textbf{Notas}           & \\
 \textbf{Excepciones}     & La oferta de alquiler ya se encuentra publicada \\
-\textbf{Salida}          & \code{idOfertaAlquiler} = código identificador único para la oferta \\
-\textbf{Precondiciones}  & Existe el objeto \code{ViviendaAlquiler} identificado por \code{idViviendaAlquiler} \\
-\textbf{Postcondiciones} & Se creó un objeto \code{OfertaAlquiler} \\
+\textbf{Salida}          & \texttt{idOfertaAlquiler} = código identificador único para la oferta \\
+\textbf{Precondiciones}  & Existe el objeto \texttt{ViviendaAlquiler} identificado por \texttt{idViviendaAlquiler} \\
+\textbf{Postcondiciones} & Se creó un objeto \texttt{OfertaAlquiler} \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\code{altaPublicidad}}
+\subsection{\texttt{altaPublicidad}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
-\textbf{Nombre}          & \code{altaPublicidad (idViviendaAlquiler, descripcion, fechaInicio, fechaFin)} \\
+\textbf{Nombre}          & \texttt{altaPublicidad (idViviendaAlquiler, descripcion, fechaInicio, fechaFin)} \\
 \midrule
 \textbf{Responsabilidad} & Publicar un anuncio sobre una vivienda \\
 \textbf{Tipo}            & Gestión Viviendas \\
 \textbf{Notas}           & \\
 \textbf{Excepciones}     & \\
-\textbf{Salida}          & \code{idPublicidad} = código identificador único para el anuncio \\
-\textbf{Precondiciones}  & Existe el objeto \code{ViviendaAlquiler} identificado por \code{idViviendaAlquiler} \\
-\textbf{Postcondiciones} & Se creó un objeto \code{Publicidad} \\
+\textbf{Salida}          & \texttt{idPublicidad} = código identificador único para el anuncio \\
+\textbf{Precondiciones}  & Existe el objeto \texttt{ViviendaAlquiler} identificado por \texttt{idViviendaAlquiler} \\
+\textbf{Postcondiciones} & Se creó un objeto \texttt{Publicidad} \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\code{bajaOfertaAlquilerVivienda}}
+\subsection{\texttt{bajaOfertaAlquilerVivienda}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
-\textbf{Nombre}          & \code{bajaOfertaAlquilerVivienda (idOfertaAlquiler)} \\
+\textbf{Nombre}          & \texttt{bajaOfertaAlquilerVivienda (idOfertaAlquiler)} \\
 \midrule
 \textbf{Responsabilidad} & Dar de baja una oferta de alquiler de una vivienda \\
 \textbf{Tipo}            & Gestión Viviendas \\
 \textbf{Notas}           & \\
 \textbf{Excepciones}     & La oferta ya se encuentra dada de baja \\
 \textbf{Salida}          & \\
-\textbf{Precondiciones}  & Existe el objeto \code{OfertaAlquiler} identificado por \code{idOfertaAlquiler} \\
-\textbf{Postcondiciones} & La \code{OfertaAlquiler} quedó dada de baja y se elimina el objeto \\
+\textbf{Precondiciones}  & Existe el objeto \texttt{OfertaAlquiler} identificado por \texttt{idOfertaAlquiler} \\
+\textbf{Postcondiciones} & La \texttt{OfertaAlquiler} quedó dada de baja y se elimina el objeto \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\code{bajaPublicidad}}
+\subsection{\texttt{bajaPublicidad}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
-\textbf{Nombre}          & \code{bajaPublicidad (idPublicidad)} \\
+\textbf{Nombre}          & \texttt{bajaPublicidad (idPublicidad)} \\
 \midrule
 \textbf{Responsabilidad} & Dar de baja un anuncio sobre una vivienda \\
 \textbf{Tipo}            & Gestión Viviendas \\
 \textbf{Notas}           & \\
 \textbf{Excepciones}     & El anuncio ya se encuentra dado de baja \\
 \textbf{Salida}          & \\
-\textbf{Precondiciones}  & Existe el objeto \code{Publicidad} identificado por \code{idPublicidad} \\
-\textbf{Postcondiciones} & La \code{Publicidad} quedó dada de baja y se elimina el objeto \\
+\textbf{Precondiciones}  & Existe el objeto \texttt{Publicidad} identificado por \texttt{idPublicidad} \\
+\textbf{Postcondiciones} & La \texttt{Publicidad} quedó dada de baja y se elimina el objeto \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\code{modificarOfertaAlquilerVivienda}}
+\subsection{\texttt{modificarOfertaAlquilerVivienda}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
-\textbf{Nombre}          & \code{modificarOfertaAlquilerVivienda (idOfertaAlquiler, fechaInicio, fechaFin, condicionesAlquiler)} \\
+\textbf{Nombre}          & \texttt{modificarOfertaAlquilerVivienda (idOfertaAlquiler, fechaInicio, fechaFin, condicionesAlquiler)} \\
 \midrule
 \textbf{Responsabilidad} & Modificar la información sobre la oferta de alquiler de una vivienda \\
 \textbf{Tipo}            & Gestión Viviendas \\
 \textbf{Notas}           & \\
 \textbf{Excepciones}     & \\
 \textbf{Salida}          & \\
-\textbf{Precondiciones}  & Existe el objeto \code{OfertaAlquiler} identificado por \code{idOfertaAlquiler} \\
+\textbf{Precondiciones}  & Existe el objeto \texttt{OfertaAlquiler} identificado por \texttt{idOfertaAlquiler} \\
 \textbf{Postcondiciones} & La información de la oferta de alquiler quedó modificada \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\code{modificarPublicidad}}
+\subsection{\texttt{modificarPublicidad}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
-\textbf{Nombre}          & \code{modificarPublicidad (idPublicidad, descripcion, fechaInicio, fechaFin)} \\
+\textbf{Nombre}          & \texttt{modificarPublicidad (idPublicidad, descripcion, fechaInicio, fechaFin)} \\
 \midrule
 \textbf{Responsabilidad} & Modificar la información sobre un anuncio sobre una vivienda \\
 \textbf{Tipo}            & Gestión Viviendas \\
 \textbf{Notas}           & \\
 \textbf{Excepciones}     & \\
 \textbf{Salida}          & \\
-\textbf{Precondiciones}  & Existe el objeto \code{Publicidad} identificado por \code{idPublicidad} \\
+\textbf{Precondiciones}  & Existe el objeto \texttt{Publicidad} identificado por \texttt{idPublicidad} \\
 \textbf{Postcondiciones} & La información del anuncio quedó modificada \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
 \end{center}
 
-\subsection{\code{consultarOfertaAlquiler}}
+\subsection{\texttt{consultarOfertaAlquiler}}
 
 \begin{center}
 \begin{tabular}{l p{13cm}}
-\textbf{Nombre}          & \code{consultarOfertaAlquiler (idOfertaAlquiler)} \\
+\textbf{Nombre}          & \texttt{consultarOfertaAlquiler (idOfertaAlquiler)} \\
 \midrule
 \textbf{Responsabilidad} & Mostrar la oferta de alquiler de una vivienda \\
 \textbf{Tipo}            & Gestión Viviendas \\
 \textbf{Notas}           & \\
 \textbf{Excepciones}     & \\
-\textbf{Salida}          & \code{infoOfertaAlquiler} = lista compuesta por \{\code{fechaInicio}, \code{fechaFin}, \code{condicionesAlquiler}\} \\
-\textbf{Precondiciones}  & Existe el objeto \code{OfertaAlquiler} identificado por \code{idOfertaAlquiler} \\
+\textbf{Salida}          & \texttt{infoOfertaAlquiler} = lista compuesta por \{\texttt{fechaInicio}, \texttt{fechaFin}, \texttt{condicionesAlquiler}\} \\
+\textbf{Precondiciones}  & Existe el objeto \texttt{OfertaAlquiler} identificado por \texttt{idOfertaAlquiler} \\
 \textbf{Postcondiciones} & \\
 \textbf{Autor}           & Atanasio Rubio Gil \\
 \end{tabular}
